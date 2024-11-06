@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.profile img{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+}
+
+.header-icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.notification{
+    font-size: 20px;
+}
+.search{
+    font-size: 20px !important;
+}

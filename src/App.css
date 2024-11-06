@@ -1,38 +1,236 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Tint&family=Exo+2:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+.App{
+  max-width: 600px;
+  overflow-y: scroll;
+  scrollbar-width: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.auth-container {
+    font-family:"Jost", sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffaf3;
+    font-family: sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.my-form-group {
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.my-form-input {
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0px 10px 0px 10px;
+}
+
+.my-form-input:focus{
+    outline: none;
+    background-color: #fffaf3;
+}
+
+.my-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.auth-container-form-wrap{
+    padding: 20px;
+}
+
+.auth-container-img img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-bottom-right-radius: 100px;
+}
+
+.auth-container-img{
+    position:relative;
+}
+
+.return-back{
+    position: absolute;
+    top:10px;
+    left:10px;
+    height: 35px;
+    width: 35px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 100%;
+    font-size: 28px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    cursor: pointer;
+}
+
+.head h2{
+    font-family:"Jost", sans-serif;
+    margin-bottom: 5px;
+    line-height: 24px;
+}
+
+.head{
+    margin-bottom:22px;
+}
+
+.head p{
+    margin-top: 0px;
+    font-family:"Jost", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.sign-auth-btn >*{
+    height: 50px;
+    width: 100%;
+    border: none;
+    background-color: black;
+    border-radius: 50px;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.auth-submit{
+    font-size: 16px;
+}
+
+.auth-submit>*{
+    text-decoration: none !important;
+    color: white;
+}
+.auth-submit>*:hover{
+    color: white;
+}
+
+.auth-submit .icon{
+    height: 43px;
+    width: 43px;
+    border-radius: 100%;
+    background-color: white;
+    color: black;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-form label{
+    font-family:"Jost", sans-serif;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.auth-btn-wrap .auth-btn{
+    height: 50px;
+    width: 100%;
+    background-color: #e7e1da;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family:"Jost", sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    padding: 0px 50px 0px 50px;
+}
+
+.auth-btn-wrap .auth-btn:hover{
+    background-color: #e8e2db;
+}
+
+.auth-btn svg{
+    font-size: 22px;
+}
+
+.my-form-checkbox{
+    display: flex;
+    align-items: center;
+}
+
+.my-form-checkbox span{
+    font-family:"Jost", sans-serif;
+    font-size: 15px;
+    margin-left: 12px;
+}
+
+.my-form-checkbox{
+    position: relative;
+}
+
+.my-form-check .checkbox{
+    height: 20px;
+    width: 20px;
+}
+
+.my-form-check .checkbox:checked{
+    background-color: black !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+
+.continue-with-txt{
+    position: relative;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.continue-with-txt span{
+    position: absolute;
+    top: calc(50% - 9px);
+    left: calc(50% - 61px);
+    background-color: #fffaf3;
+    margin: 0px;
+    z-index: 999;
+    font-size: 14px;
+    font-family:"Jost", sans-serif;
+    font-weight: 600;
+}
+
+.continue-with-txt::before{
+    content:"";
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top:50%;
+    left: 0px;
+    z-index: 0;
+}
+
+.auth-btn-route{
+    font-family:"Jost", sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.auth-btn-route p{
+    margin: 0px;
+}
+
+.auth-btn-route a{
+    color: black;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.mt-cus{
+    margin-bottom: 10px;
+}
+
+.box-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

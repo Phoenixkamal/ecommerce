@@ -1,0 +1,19 @@
+.forgot-pwd{
+    position: relative;
+}
+.forgot-pwd p{
+    margin: 0px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: end;
+    text-decoration: underline;
+    cursor: pointer;
+    color:black;
+    position: absolute;
+    left: 0px;
+}
+.error{
+    display: inline;
+    text-transform: capitalize;
+    flex-grow: 1;
+}

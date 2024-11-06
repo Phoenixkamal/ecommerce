@@ -1,0 +1,9 @@
+.errMsg{
+    font-size: 14px;
+    color: red;
+    transition: all .5s;
+}
+
+.border-red{
+    border: 1px solid red;
+}

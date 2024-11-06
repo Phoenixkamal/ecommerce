@@ -1,0 +1,20 @@
+.digit-group{
+    display: flex;
+    justify-content: space-between;
+    width: 262px;
+    align-self: center;
+}
+
+.digit-box{
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+}
+
+.digit-box:focus{
+    outline: none;
+    background-color: #fffaf3;
+}
