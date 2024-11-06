@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "./LoginPage.css"
 import { FaArrowRight } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
@@ -11,7 +11,7 @@ import { DataContext } from '../../../contexts/Datacontext';
 import api from '../../../api/api';
 
 const LoginPage = () => {
-    const { loginValidation ,setUserData} = useContext(DataContext)
+    const { loginValidation ,setUserData,setIsAuthenticated} = useContext(DataContext)
     const pageHeading = "Sign in to your account"
     const pageDescription = "Welcome Back You've Been Missed!"
     const navigate = useNavigate()
@@ -44,6 +44,7 @@ const LoginPage = () => {
             if (response.data.status === "OK") {
                 console.log(response.data.responsedata)
                 setUserData(response.data.responsedata)
+                setIsAuthenticated(true)
                 navigate('/dashboard')
             }
             else {

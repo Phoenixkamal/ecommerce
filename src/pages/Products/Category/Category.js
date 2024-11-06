@@ -1,39 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useContext } from 'react'
 import './Category.css'
-import { FaRegHeart } from "react-icons/fa";
 import categoryImg from '../../../assets/images/product-category-1.png'
-import cardImg from '../../../assets/images/product-card-img-1.png'
-import api  from '../../../api/api'
-import ProductsList from '../../../components/productslist/ProductsList';
-// import { IoSearch } from "react-icons/io5";
-// import { LuHome } from "react-icons/lu";
-// import { IoCartOutline } from "react-icons/io5";
-// import { IoIosPaper } from "react-icons/io";
-// import { IoPersonOutline } from "react-icons/io5";
+import { DataContext } from '../../../contexts/Datacontext';
+const CategoryList = React.lazy(() => import('../../../components/categorylist/CategoryList'))
 
 
 
 const Category = () => {
+    const { categories } = useContext(DataContext)
 
-    const [categories,setCategories] = useState([])
-    
-    useEffect(()=>{
-        async function getAllCategory(){
-            try{
-                const response = await api.get('/User/Category')
-                if(response.data.status==="OK"){
-                    setCategories(response.data.responsedata)
-                }
-                else{
-                    console.log(response.data.message)
-                }
-            }
-            catch(err){
-                console.log(err.message)
-            }
-        }
-        getAllCategory()
-    },[])
     return (
         <section className='category-page'>
             {/* <header className='product-header'>
@@ -80,9 +55,11 @@ const Category = () => {
                         </button>
                     </div>
                 </div>
-                <ProductsList
-                    categories={categories}
-                />
+                <Suspense fallback="...loading">
+                    <CategoryList
+                        categories={categories}
+                    />
+                </Suspense>
             </main>
             {/* <footer className='product-footer'>
                 <div className='icon'>
