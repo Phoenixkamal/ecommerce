@@ -1,0 +1,75 @@
+.productInsightContent{
+    margin: 60px 0px 70px 0px !important;
+}
+.productInsightContentBody {
+    display: grid;
+    grid-template-areas:
+    "category category"
+    "name name"
+    "price counter"
+    "description description"
+
+       ;
+    grid-template-columns: 1fr 4fr;
+    gap: 10px; 
+    padding: 20px;
+}
+
+.product-insight-image {
+    grid-area: image;
+}
+
+.productCategory {
+    grid-area: category;
+}
+
+.productName {
+    grid-area: name;
+}
+
+.productPrice {
+    grid-area: price;
+}
+
+.productCounter {
+    grid-area: counter;
+}
+
+.productDescription {
+    grid-area: description;
+}
+.product-insight-image img {
+    width: 100%;
+    height: calc(100vh - 120px);
+    object-fit: cover;
+    object-position: center;
+}
+.product-insight-image{
+    padding: 10px;
+}
+
+.productCategory {
+    font-size: 14px;
+    font-family: Jost, sans-serif;
+    text-transform:capitalize;
+}
+
+.productName{
+    font-size: 20px;
+    font-family: Jost, sans-serif;
+    font-weight: 600;
+}
+.tag{
+    font-size: 16px;
+    font-family: Jost, sans-serif;
+    font-weight: 600;
+}
+
+.productPrice .price{
+    font-size: 20px;
+    font-family: Jost, sans-serif;
+    font-weight: 600;
+}
+.product-insight-cart{
+    font-size: 25px;
+}

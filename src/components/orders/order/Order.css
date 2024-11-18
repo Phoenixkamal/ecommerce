@@ -1,0 +1,52 @@
+.order{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.order-head{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 600;
+    font-family: "Jost", sans-serif;
+}
+
+.order-head h6{
+    font-family: "Jost", sans-serif;
+}
+
+.order-id{
+    display: flex;
+}
+
+.order-id .id{
+    font-size: 16px;
+    font-weight: 600;
+    color: #4cb1ff;
+    font-family: "Jost", sans-serif;
+    margin-left: 4px;
+}
+
+.order-head .status{
+    color: #159e42;
+}
+.content-head p{
+    font-weight: 600;
+    font-family: "Jost", sans-serif;
+    margin-bottom: 0px;
+}
+
+.customer-info{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.order-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}

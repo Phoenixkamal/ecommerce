@@ -1,0 +1,119 @@
+.saved-address-content-1{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 6fr 1fr;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    justify-items: center;
+    align-items: center;  
+    padding: 10px 0px;  
+}
+.saved-address-contents{
+    margin-top: 70px;
+}
+p{
+    margin: 0;
+}
+
+.saved-address-content-icon{
+    margin-top: 10px;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: start;
+}
+
+.saved-address{
+    flex-grow: 1;
+}
+
+.saved-address .content-wrapper{
+    justify-self: start;
+}
+
+
+.custom-radio input[type="radio"] {
+    display: none;
+}
+
+.radio-mark {
+    display: inline-block;
+    width: 24px; 
+    height: 24px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+}
+
+.custom-radio input[type="radio"]:checked + .radio-mark::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.saved-address-content-address{
+    color: #00000080;
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+}
+.saved-address-content-name h5{
+    font-family: "Jost", sans-serif;
+    text-transform: capitalize;
+}
+
+.saved-address-edit-btn button{
+    color: #159e42;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0px;
+}
+
+.add-address-btn{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 13fr 1fr;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 50px;
+    background-color: transparent;
+    padding-right:20px;
+    margin:20px 0px;
+}
+
+.add-address-btn .third-child{
+    justify-self: end;
+}
+
+.add-address-btn .second-child{
+    justify-self: start;
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.add-address-btn .first-child{
+    font-size: 25px;
+    justify-self: center;
+    align-self: center;
+}
+
+.custom-radio{
+    justify-self: end;
+}

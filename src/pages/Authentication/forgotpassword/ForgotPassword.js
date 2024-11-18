@@ -4,8 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import {DataContext} from '../../../contexts/Datacontext'
 import FormInput from '../../../components/forminput/FormInput'
-import AuthBanner from '../../../components/authbanner/AuthBanner'
-import AuthHeader from '../../../components/authheader/AuthHeader'
+import AuthBanner from '../../../components/authentication/authbanner/AuthBanner'
+import AuthHeader from '../../../components/authentication/authheader/AuthHeader'
 
 const ForgotPassword = () => {
     const navigate = useNavigate()
@@ -20,7 +20,7 @@ const ForgotPassword = () => {
             type: "email",
             errMsg: "Please enter a valid email address!",
             required: true,
-            pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/s
+            pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
         }
     ]
 

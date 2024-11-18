@@ -4,14 +4,14 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom';
-import AuthBanner from '../../../components/authbanner/AuthBanner';
-import AuthHeader from '../../../components/authheader/AuthHeader';
+import AuthBanner from '../../../components/authentication/authbanner/AuthBanner';
+import AuthHeader from '../../../components/authentication/authheader/AuthHeader';
 import FormInput from '../../../components/forminput/FormInput';
 import { DataContext } from '../../../contexts/Datacontext';
 import api from '../../../api/api';
 
 const LoginPage = () => {
-    const { loginValidation ,setUserData,setIsAuthenticated} = useContext(DataContext)
+    const { loginValidation} = useContext(DataContext)
     const pageHeading = "Sign in to your account"
     const pageDescription = "Welcome Back You've Been Missed!"
     const navigate = useNavigate()
@@ -43,8 +43,8 @@ const LoginPage = () => {
             const response = await api.post('/Authentication/Login', { username: email, password: password })
             if (response.data.status === "OK") {
                 console.log(response.data.responsedata)
-                setUserData(response.data.responsedata)
-                setIsAuthenticated(true)
+                localStorage.setItem('userdata',JSON.stringify(response.data.responsedata))
+                localStorage.setItem("token",response.data.responsedata.accessToken)
                 navigate('/dashboard')
             }
             else {

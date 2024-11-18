@@ -79,9 +79,6 @@ main{
     flex-direction: column;
 }
 
-.card-content-head{
-    /* width: 126px; */
-}
 .card-content-head h6{
     font-family: "Jost", sans-serif;
     font-size: 14px;

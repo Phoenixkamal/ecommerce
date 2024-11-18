@@ -1,29 +1,36 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { IoCartOutline, IoPersonOutline } from 'react-icons/io5'
 import { LuHome } from 'react-icons/lu'
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { IoNewspaperOutline } from "react-icons/io5";
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { DataContext } from '../../contexts/Datacontext';
 
 const Footer = () => {
-    const navigate = useNavigate()
+    const { cartCount, cartLength } = useContext(DataContext)
+
     return (
         <footer className='product-footer'>
-            <div className='icon' onClick={()=>{navigate('/dashboard/')}}>
+            <Link className='icon' to="/dashboard">
                 <LuHome />
-            </div>
-            <div className='icon' onClick={()=>{navigate('/dashboard/products')}}>
+            </Link>
+            <Link className='icon' to="/dashboard/products">
                 <IoNewspaperOutline />
-            </div>
-            <div className='icon'>
+            </Link>
+            <Link className='icon' to="/dashboard/cart">
                 <IoCartOutline />
-            </div>
-            <div className='icon'>
+                <div className='cart-length'>
+                    {
+                        cartCount
+                    }
+                </div>
+            </Link>
+            <Link className='icon' to="/dashboard/orders">
                 <HiOutlineShoppingBag />
-            </div>
-            <div className='icon'>
+            </Link>
+            <Link className='icon' to='/dashboard/userprofile'>
                 <IoPersonOutline />
-            </div>
+            </Link>
         </footer>
     )
 }

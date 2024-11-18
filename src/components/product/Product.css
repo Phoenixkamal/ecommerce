@@ -1,9 +1,0 @@
-.product-card{
-    height: calc(100% - 75px);
-}
-
-.card-img{
-    background-color: white;
-    border-radius: 20px;
-    height: 100%;
-}

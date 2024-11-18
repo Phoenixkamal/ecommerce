@@ -4,8 +4,8 @@ import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import FormInput from '../../../components/forminput/FormInput';
-import AuthHeader from '../../../components/authheader/AuthHeader';
-import AuthBanner from '../../../components/authbanner/AuthBanner';
+import AuthHeader from '../../../components/authentication/authheader/AuthHeader';
+import AuthBanner from '../../../components/authentication/authbanner/AuthBanner';
 import { DataContext } from '../../../contexts/Datacontext';
 
 

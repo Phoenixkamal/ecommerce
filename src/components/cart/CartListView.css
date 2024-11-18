@@ -1,0 +1,14 @@
+.remove-btn-icon{
+    font-size: 16px;
+}
+.remove-btn-name{
+    font-size: 14px;
+    font-family: "Jost", sans-serif;
+    margin-top: 5px;
+}
+.remove-btn{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}

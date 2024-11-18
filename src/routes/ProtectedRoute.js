@@ -1,12 +1,12 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom'
 
-const ProtectedRoute = ({children , isAuthenticated}) => {
-  
+const ProtectedRoute = ({children}) => {
+  const token = localStorage.getItem('token')
   return (
-    <div>
-      {isAuthenticated ? children : <Navigate to='/login'/>}
-    </div>
+    <>
+      {token ? children : <Navigate to='/login'/>}
+    </>
   )
 }
 

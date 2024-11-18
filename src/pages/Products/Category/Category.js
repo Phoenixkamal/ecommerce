@@ -1,28 +1,15 @@
-import React, { Suspense, useContext } from 'react'
+import React, {  useContext } from 'react'
 import './Category.css'
-import categoryImg from '../../../assets/images/product-category-1.png'
 import { DataContext } from '../../../contexts/Datacontext';
-const CategoryList = React.lazy(() => import('../../../components/categorylist/CategoryList'))
-
-
+import CategoryList from '../../../components/products/categorylist/CategoryList';
 
 const Category = () => {
     const { categories } = useContext(DataContext)
 
     return (
         <section className='category-page'>
-            {/* <header className='product-header'>
-                <div className='header-title'>
-                    <h4>Category</h4>
-                </div>
-                <div className='search'>
-                    <div className='icon'>
-                        <IoSearch />
-                    </div>
-                </div>
-            </header> */}
             <main className='category-page-content'>
-                <div className='category-sec-1'>
+                {/* <div className='category-sec-1'>
                     <div className='category-sec-1-head'>
                         <h5>
                             Set Your Wardrobe With Our Amazing Selection!
@@ -54,30 +41,13 @@ const Category = () => {
                             Child
                         </button>
                     </div>
-                </div>
-                <Suspense fallback="...loading">
+                </div> */}
+                <div className='mb-5'>
                     <CategoryList
                         categories={categories}
                     />
-                </Suspense>
+                </div>
             </main>
-            {/* <footer className='product-footer'>
-                <div className='icon'>
-                    <LuHome/>
-                </div>
-                <div className='icon'>
-                    <FaRegHeart/>
-                </div>
-                <div className='icon'>
-                    <IoCartOutline/>
-                </div>
-                <div className='icon'>
-                    <IoIosPaper/>
-                </div>
-                <div className='icon'>
-                    <IoPersonOutline/>
-                </div>
-            </footer> */}
         </section>
     )
 }

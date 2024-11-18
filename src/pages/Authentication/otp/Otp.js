@@ -2,8 +2,8 @@ import React, { useRef, useState } from 'react'
 import './Otp.css'
 import { FaArrowRight } from "react-icons/fa6";
 import { Link, useNavigate } from 'react-router-dom';
-import AuthHeader from '../../../components/authheader/AuthHeader';
-import AuthBanner from '../../../components/authbanner/AuthBanner';
+import AuthHeader from '../../../components/authentication/authheader/AuthHeader';
+import AuthBanner from '../../../components/authentication/authbanner/AuthBanner';
 
 const Otp = () => {
     const pageHeading = "Enter Code"

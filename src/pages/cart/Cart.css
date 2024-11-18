@@ -1,0 +1,43 @@
+.subtotal{
+    margin-top: 70px;
+}
+.cart-list{
+    padding: 0px 15px;
+    margin: 0px !important;
+}
+
+.cart-contents{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 122px 5fr 136px;
+    margin-bottom: 20px;
+}
+
+.cart-is-empty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ff586e;
+    font-family: Jost, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+.subtotal{
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.subtotal-head{
+    font-family: Jost, sans-serif;
+    font-size: 18px;
+}
+.subtotal-price{
+    font-family: Jost, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+.place-order{
+    margin-bottom: 70px !important;
+}

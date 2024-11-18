@@ -1,0 +1,137 @@
+.orderInfoPage{
+    margin-top: 70px;
+    height: 100%;
+}
+
+
+.orderInfoPageContent {
+    height: 100vh;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 70px auto auto 1fr 50px;
+    gap: 10px;
+}
+main{
+    margin: 0px;
+}
+@media screen and (max-width:630px) {
+    .productHeader{
+        width: 100vw;
+    }
+}
+
+
+.methodsWrap{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 10fr 1fr;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.icon{
+    align-self: center;
+    justify-self: center;
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.methods{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr 1fr;
+    gap: 5px;
+}
+
+.orderInfo{
+    font-size: 10px;
+    color: #00000080;
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+}
+
+.list {
+    list-style-type: none;
+    margin: 0px;
+    padding: 20px 0px;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.billingWrap{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.billingItemlist {
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 3fr 1fr 1fr;
+}
+.itemQty {
+    align-self: center;
+    justify-self: center;
+}
+
+.itemPrice {
+    align-self: center;
+    justify-self: center;
+}
+
+.billing {
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 4fr 1fr;
+}
+
+.billingPrice {
+    justify-self: end;
+}
+
+.total{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 3fr 1fr;
+    height: 70px;
+    padding-top: 20px;
+}
+.total h4{
+    font-family: "Jost", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+.billingPrice{
+    justify-self: center;
+    align-items: center;
+}
+
+.billingWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.head{
+    flex-grow: 1;
+}
+
+.totalPrice{
+    justify-self: center;
+}
+.shipping{
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #159e42;
+}

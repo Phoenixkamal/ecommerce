@@ -1,0 +1,61 @@
+.product-list-item{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 3fr;
+    border-bottom:1px solid rgba(0,0,0,0.2);
+}
+.product-list-view{
+    flex-grow: 1;
+}
+.product-list-image img{
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+.product-list-image{
+    justify-self: center;
+    align-self: center;
+}
+
+.retail-price,
+.selling-price{
+    font-family: "Jost", sans-serif;
+    font-size: 13px;
+}
+
+.selling-price{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.add-to-card-btn{
+    width: 85px;
+    height: 44px !important;
+    font-family: "Jost", sans-serif;
+    font-size: 14px !important;
+}
+
+.cart-icon{
+    font-size: 20px;
+}
+
+.product-list-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-list-content-wrap{
+    padding: 10px;
+}
+.list-item-name{
+    font-family: "Jost", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.counter{
+    font-size: 30px;
+}

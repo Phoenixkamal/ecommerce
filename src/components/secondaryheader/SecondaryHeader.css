@@ -1,0 +1,12 @@
+.secondary-header-title{
+    font-family: Jost, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    justify-self: center;
+}
+
+.secondary-header{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 0px 2fr;
+}

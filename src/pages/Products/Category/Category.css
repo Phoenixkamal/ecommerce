@@ -156,6 +156,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
+}
+
+.icon:hover{
+    color: black;
 }
 
 @media screen and (max-width:630px) {

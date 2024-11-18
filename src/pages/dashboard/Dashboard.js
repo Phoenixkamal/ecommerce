@@ -1,15 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Dashboard.css'
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 
-const Dashboard = ({children}) => {
-
+const Dashboard = ({ children }) => {
   return (
     <section className='dashboard'>
       <Header/>
       {children}
-      <Footer/>
+      <Footer />
     </section>
   )
 }

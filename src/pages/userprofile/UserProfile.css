@@ -1,0 +1,113 @@
+.userprofile{
+    background:  linear-gradient(180deg, #FEECA0 0%, #FFFAF3 29.87%);
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    width: 600px;
+}
+@media (max-width:600px){
+    .userprofile{
+        width: auto;
+    }
+}
+.userprofile-header{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 1fr;
+    height: 60px;
+    padding: 10px 15px;
+}
+
+.profile-greeting{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 12fr;
+    margin-top: 18px;
+}
+
+.userprofile-header-brand img{
+    width: 170px;
+    object-fit: cover;
+    object-position: center;
+}
+.notification{
+    justify-self: end;
+}
+.profile-greeting-profile{
+    padding: 3px;
+    background-color: white;
+    border-radius: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-greeting-profile img{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+}
+
+.profile-greeting{
+    padding: 0px 15px;
+}
+
+.greetings{
+    align-self: center;
+    font-size: 20px;
+    font-family: Jost, sans-serif;
+    margin-left: 10px;
+
+}
+
+.account-setting-header h5{
+    font-family: Jost, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.account-settings{
+    padding: 0px 15px;
+    margin-top: 32px;
+}
+
+.account-setting-list{
+    list-style-type: none;
+    padding: 0px ;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 40px 40px 40px;
+    row-gap: 10px;
+}
+
+.account-setting-list-items{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 23fr 1fr;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.list-item-icon{
+    justify-self: start;
+    font-size: 25px;
+    align-self: start;
+}
+
+.account-setting-list-items .option-name{
+    align-self: center;
+    font-family: Jost, sans-serif;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: none;
+    color: black;
+}

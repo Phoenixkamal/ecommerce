@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { FaArrowRight } from "react-icons/fa6";
 import { Link, useNavigate } from 'react-router-dom';
-import AuthBanner from '../../../components/authbanner/AuthBanner';
-import AuthHeader from '../../../components/authheader/AuthHeader';
+import AuthBanner from '../../../components/authentication/authbanner/AuthBanner';
+import AuthHeader from '../../../components/authentication/authheader/AuthHeader';
 import FormInput from '../../../components/forminput/FormInput';
 import { DataContext } from '../../../contexts/Datacontext';
 

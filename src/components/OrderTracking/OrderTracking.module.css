@@ -1,0 +1,191 @@
+.orderTracking {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .orderTracking h3 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  
+  .trackingList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  
+  .trackingItem {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 1.5em;
+  }
+  
+  .trackingItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1em;
+    height: 100%;
+    width: 2px;
+    background-color: #cfcfcf;
+  }
+  
+  .trackingItem.completed::before {
+    background-color: green;
+  }
+  
+  .icon {
+    position: relative;
+    top: 0.2em;
+  }
+  
+  .circleIcon, .checkIcon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 2px solid #cfcfcf;
+    background-color: white;
+    color: green;
+    text-align: center;
+    line-height: 0.8em;
+    font-size: 1em;
+    margin-right: 0.5em;
+  }
+  
+  .completedIcon {
+    background-color: green;
+    color: white;
+    border: none;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    font-weight: bold;
+    color: green;
+  }
+  
+  .completed .label {
+    color: green;
+  }
+  
+  .date {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .description {
+    font-size: 0.8em;
+    color: #999;
+  }
+  .trackinglist{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+}
+  .orderTracking {
+    /* Styles for the main container */
+}
+
+.orderTracking h3 {
+    /* Styles for the heading */
+}
+
+.list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 6fr;
+    position: relative;
+    padding-bottom: 30px;
+    width: 50%;
+}
+
+@media (max-width:600px){
+  .list{
+    width: 100%;
+  }
+}
+
+.roundCheckbox {
+    justify-self: center;
+    align-self: center;
+    border: 1px solid black;
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
+    background-color: #fffaf3;
+    position: relative;
+}
+
+.roundCheckboxChecked::after{
+  content: '\2714';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.roundCheckboxChecked{
+  border-radius: 100%;
+  background-color: #159e42;
+  border: 1px solid #159e42;
+}
+
+
+.list:nth-of-type(1)::after,
+.list:nth-of-type(2)::after,
+.list:nth-of-type(3)::after{
+  content: '';
+  height: 100%;
+  width: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: -40%;
+  left: calc((100% / 7) / 2);
+  z-index: -1;
+}
+
+.lineChecked::after{
+  background-color: #159e42 !important;
+}
+
+.roundCheckbox.completed {
+    /* Styles for completed steps (optional) */
+}
+
+.content {
+    /* Container for the text content within each list item */
+}
+
+.contentHead {
+   color: #159e42;
+   font-family: "Jost", sans-serif;
+   font-size: 16px;
+   font-weight: 600;
+}
+
+.contentHead span{
+  font-weight: 400;
+}
+
+.date {
+    /* Styles for the date text next to the status name */
+}
+
+.contentDescription {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+  

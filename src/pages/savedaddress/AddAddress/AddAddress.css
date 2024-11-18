@@ -1,0 +1,35 @@
+.form-title{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Jost", sans-serif;
+    margin: 0px;
+}
+
+.addaddress{
+    margin:80px 0px;
+}
+
+.save-address{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.save-address-options{
+    display: flex;
+    gap: 10px;
+}
+
+.save-address-option{
+    background-color: #fffaf3;
+    transition:all .5s;
+}
+
+.save-address-option:active{
+    background-color: black;
+    color: white;
+}
+
+.save-address-option-btn-active{
+    background-color: black;
+    color: white;
+}

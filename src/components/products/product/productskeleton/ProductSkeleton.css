@@ -1,0 +1,51 @@
+/* Skeleton base styles */
+.skeleton {
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 4px; /* Rounded corners */
+    overflow: hidden; /* To contain animation inside */
+    position: relative;
+  }
+  
+  /* Skeleton animation */
+  .skeleton::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start the animation off-screen */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      rgba(255, 255, 255, 0.2) 0%, 
+      rgba(255, 255, 255, 0.4) 50%, 
+      rgba(255, 255, 255, 0.2) 100%);
+    animation: skeleton-loading 1.5s infinite; /* Smooth animation */
+  }
+  
+  /* Skeleton animation keyframes */
+  @keyframes skeleton-loading {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  /* Skeleton element variations */
+  .skeleton.text {
+    height: 16px;
+    width: 70%; /* Randomize width for better realism */
+    margin: 10px 0;
+  }
+  
+  .skeleton.image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%; /* Circle for profile images */
+  }
+  
+  .skeleton.card {
+    height: 200px;
+    width: 100%;
+    border-radius: 8px;
+  }

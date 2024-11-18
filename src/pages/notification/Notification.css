@@ -1,0 +1,36 @@
+.notifications{
+    margin-top: 80px;
+    flex-grow: 1;
+}
+.notifications-content{
+    display: grid;
+    grid-auto-flow: row;    
+}
+
+.notification-entity{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 7fr;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 20px 15px;
+    width: 100%;
+}
+
+.notification-image img{
+    object-fit: cover;
+    height: 60px;
+    width: 60px;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.notification-head p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.notification-date{
+    font-weight: 500;
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    opacity: 0.7;
+}

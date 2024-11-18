@@ -1,0 +1,19 @@
+.black-btn-wrap{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.black-btn{
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: "Jost", sans-serif;
+    padding: 7px 15px;
+    border-radius: 50px;
+}
+
+.black-btn-wrap:hover{
+    text-decoration: none;
+}
