@@ -1,0 +1,80 @@
+2024-11-11 20:10:54.278 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API) in 110.5611ms
+2024-11-11 20:10:54.278 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2024-11-11 20:10:54.365 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API)'
+2024-11-11 20:10:54.281 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5145/user/products?categoryid= - -
+2024-11-11 20:10:54.295 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2024-11-11 20:10:54.365 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.Category (BAKERBAZZAR.API) in 90.9427ms
+2024-11-11 20:10:54.365 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5145/user/products?categoryid= - - - 200 - application/json;+charset=utf-8 201.5222ms
+2024-11-11 20:10:54.366 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.Category (BAKERBAZZAR.API)'
+2024-11-11 20:10:54.365 +05:30  INF  CORS policy execution successful.
+2024-11-11 20:10:54.366 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5145/User/Category - - - 200 - application/json;+charset=utf-8 92.2961ms
+2024-11-11 20:10:54.366 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.MyOrders (BAKERBAZZAR.API) in 174.92ms
+2024-11-11 20:10:54.366 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.MyOrders (BAKERBAZZAR.API)'
+2024-11-11 20:10:54.366 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API)'
+2024-11-11 20:10:54.366 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5145/user/myorders?displayid=a8701061-246f-4f0a-b7db-cf788913b18d - - - 200 - application/json;+charset=utf-8 175.4815ms
+2024-11-11 20:10:54.366 +05:30  INF  Route matched with {action = "Products", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Products(System.String, System.String) on controller BAKERBAZZAR.API.Controller.UserController (BAKERBAZZAR.API).
+2024-11-11 20:10:54.371 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2024-11-11 20:10:54.372 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API) in 5.8542ms
+2024-11-11 20:10:54.372 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API)'
+2024-11-11 20:10:54.372 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5145/user/products?categoryid= - - - 200 - application/json;+charset=utf-8 91.3950ms
+2024-11-11 20:10:55.858 +05:30  INF  Request starting HTTP/1.1 OPTIONS http://localhost:5145/Authentication/Login - -
+2024-11-11 20:10:55.858 +05:30  INF  CORS policy execution successful.
+2024-11-11 20:10:55.858 +05:30  INF  Request finished HTTP/1.1 OPTIONS http://localhost:5145/Authentication/Login - - - 204 - - 0.4677ms
+2024-11-11 20:10:55.860 +05:30  INF  Request starting HTTP/1.1 POST http://localhost:5145/Authentication/Login application/json 36
+2024-11-11 20:10:55.860 +05:30  INF  CORS policy execution successful.
+2024-11-11 20:10:55.860 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AuthenticationController.VerifyUser (BAKERBAZZAR.API)'
+2024-11-11 20:10:55.860 +05:30  INF  Route matched with {action = "VerifyUser", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] VerifyUser(BAKERBAZZAR.API.Models.IO_Templates.LoginRequest) on controller BAKERBAZZAR.API.Controller.AuthenticationController (BAKERBAZZAR.API).
+2024-11-11 20:10:55.872 +05:30  INF  verify user execution start
+2024-11-11 20:10:55.907 +05:30  INF  verify user execution end
+2024-11-11 20:10:55.907 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2024-11-11 20:10:55.907 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AuthenticationController.VerifyUser (BAKERBAZZAR.API) in 47.0475ms
+2024-11-11 20:10:55.907 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AuthenticationController.VerifyUser (BAKERBAZZAR.API)'
+2024-11-11 20:10:55.907 +05:30  INF  Request finished HTTP/1.1 POST http://localhost:5145/Authentication/Login application/json 36 - 200 - application/json;+charset=utf-8 47.4319ms
+2024-11-11 20:18:02.983 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5145/user/myorders?displayid=a8701061-246f-4f0a-b7db-cf788913b18d - -
+2024-11-11 20:18:02.983 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5145/User/Category - -
+2024-11-11 20:18:02.983 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5145/user/products?categoryid= - -
+2024-11-11 20:18:02.983 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5145/user/myorders?displayid=undefined - -
+2024-11-11 20:18:02.988 +05:30  INF  CORS policy execution successful.
+2024-11-11 20:18:02.988 +05:30  INF  CORS policy execution successful.
+2024-11-11 20:18:02.988 +05:30  INF  CORS policy execution successful.
+2024-11-11 20:18:02.988 +05:30  INF  CORS policy execution successful.
+2024-11-11 20:18:02.989 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API)'
+2024-11-11 20:18:02.989 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.UserController.MyOrders (BAKERBAZZAR.API)'
+2024-11-11 20:18:02.990 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.UserController.Category (BAKERBAZZAR.API)'
+2024-11-11 20:18:02.990 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.UserController.MyOrders (BAKERBAZZAR.API)'
+2024-11-11 20:18:02.991 +05:30  INF  Route matched with {action = "MyOrders", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] MyOrders(System.String, System.String, System.String) on controller BAKERBAZZAR.API.Controller.UserController (BAKERBAZZAR.API).
+2024-11-11 20:18:02.991 +05:30  INF  Route matched with {action = "MyOrders", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] MyOrders(System.String, System.String, System.String) on controller BAKERBAZZAR.API.Controller.UserController (BAKERBAZZAR.API).
+2024-11-11 20:18:02.991 +05:30  INF  Route matched with {action = "Products", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Products(System.String, System.String) on controller BAKERBAZZAR.API.Controller.UserController (BAKERBAZZAR.API).
+2024-11-11 20:18:02.991 +05:30  INF  Route matched with {action = "Category", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Category(System.String) on controller BAKERBAZZAR.API.Controller.UserController (BAKERBAZZAR.API).
+2024-11-11 20:18:03.129 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2024-11-11 20:18:03.130 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.Category (BAKERBAZZAR.API) in 139.0949ms
+2024-11-11 20:18:03.130 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.Category (BAKERBAZZAR.API)'
+2024-11-11 20:18:03.131 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5145/User/Category - - - 200 - application/json;+charset=utf-8 152.7188ms
+2024-11-11 20:18:03.132 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5145/User/Category - -
+2024-11-11 20:18:03.132 +05:30  INF  CORS policy execution successful.
+2024-11-11 20:18:03.132 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.UserController.Category (BAKERBAZZAR.API)'
+2024-11-11 20:18:03.132 +05:30  INF  Route matched with {action = "Category", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Category(System.String) on controller BAKERBAZZAR.API.Controller.UserController (BAKERBAZZAR.API).
+2024-11-11 20:18:03.134 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2024-11-11 20:18:03.134 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.Category (BAKERBAZZAR.API) in 1.4049ms
+2024-11-11 20:18:03.134 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.Category (BAKERBAZZAR.API)'
+2024-11-11 20:18:03.134 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5145/User/Category - - - 200 - application/json;+charset=utf-8 2.0299ms
+2024-11-11 20:18:03.134 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2024-11-11 20:18:03.135 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.MyOrders (BAKERBAZZAR.API) in 143.4316ms
+2024-11-11 20:18:03.135 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.MyOrders (BAKERBAZZAR.API)'
+2024-11-11 20:18:03.135 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5145/user/myorders?displayid=undefined - - - 417 - application/json;+charset=utf-8 156.7844ms
+2024-11-11 20:18:03.136 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2024-11-11 20:18:03.137 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API) in 145.5834ms
+2024-11-11 20:18:03.137 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API)'
+2024-11-11 20:18:03.137 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5145/user/products?categoryid= - - - 200 - application/json;+charset=utf-8 158.9549ms
+2024-11-11 20:18:03.139 +05:30  INF  Request starting HTTP/1.1 GET http://localhost:5145/user/products?categoryid= - -
+2024-11-11 20:18:03.139 +05:30  INF  CORS policy execution successful.
+2024-11-11 20:18:03.139 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API)'
+2024-11-11 20:18:03.139 +05:30  INF  Route matched with {action = "Products", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Products(System.String, System.String) on controller BAKERBAZZAR.API.Controller.UserController (BAKERBAZZAR.API).
+2024-11-11 20:18:03.143 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2024-11-11 20:18:03.144 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API) in 4.545ms
+2024-11-11 20:18:03.144 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API)'
+2024-11-11 20:18:03.144 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5145/user/products?categoryid= - - - 200 - application/json;+charset=utf-8 4.9249ms
+2024-11-11 20:18:03.149 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2024-11-11 20:18:03.149 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.MyOrders (BAKERBAZZAR.API) in 157.9859ms
+2024-11-11 20:18:03.149 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.MyOrders (BAKERBAZZAR.API)'
+2024-11-11 20:18:03.149 +05:30  INF  Request finished HTTP/1.1 GET http://localhost:5145/user/myorders?displayid=a8701061-246f-4f0a-b7db-cf788913b18d - - - 200 - application/json;+charset=utf-8 171.2962ms
