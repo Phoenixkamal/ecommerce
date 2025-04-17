@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/CJgkcXaLBA=",
+  "dgSpecHash": "BhCmrE2rPgY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\BakerBazzar\\API Code\\BAKERBAZZAR.API\\BAKERBAZZAR.API.csproj",
+  "projectFilePath": "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\ecommerce\\BAKERBAZZAR.API\\BAKERBAZZAR.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kamal\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.13\\microsoft.aspnetcore.authentication.jwtbearer.7.0.13.nupkg.sha512",
     "C:\\Users\\kamal\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.7\\microsoft.aspnetcore.openapi.7.0.7.nupkg.sha512",

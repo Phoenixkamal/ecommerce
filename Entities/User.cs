@@ -44,6 +44,14 @@
         public string? email { get; set; }
         public string? phoneno { get; set; }
         public string? password { get; set; }
+        public string? profileImage { get; set; }
+    }
+
+    public class Roles
+    {
+        public int RecordId { get; set; }
+        public int UserCount { get; set; }
+        public string? Role { get; set; }
     }
 
 }

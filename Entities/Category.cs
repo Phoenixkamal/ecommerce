@@ -5,6 +5,8 @@
     {
         [Key]
         public int? RecordId { get; set; }
+        public int? CategoryRId { get; set; }
+        public int? WarehouseRid { get; set; }
         public Guid? DisplayId { get; set; } = Guid.Empty;
         public string? CategoryCode { get; set; }
         public string? CategoryName { get; set; }
@@ -15,5 +17,9 @@
         public DateTime? LastModified { get; set; }
     }
 
- 
+    public class Units
+    {
+        public string[]? units { get; set; }
+    }
+
 }

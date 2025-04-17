@@ -15,7 +15,9 @@
         public string? PhoneNo { get; set; }
         public int RoleId { get; set; }
         public string? Gender { get; set; }        
+        public string? Role { get; set; }        
         public string? CustomerType { get; set; }
+        public string? profileImage { get; set; }
         
     }
 }

@@ -1,0 +1,178 @@
+2025-04-16 19:26:51.491 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/warehouse - - - 200 - application/json;+charset=utf-8 33.8649ms
+2025-04-16 19:26:51.491 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:26:51.503 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.ProductDetails (BAKERBAZZAR.API) in 15.6931ms
+2025-04-16 19:26:51.503 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.ProductDetails (BAKERBAZZAR.API)'
+2025-04-16 19:26:51.503 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/user/productdetails?productid=1622580 - - - 200 - application/json;+charset=utf-8 17.8262ms
+2025-04-16 19:26:51.522 +05:30  INF  Route matched with {action = "Units", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Units() on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:26:51.563 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:26:51.574 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.Units (BAKERBAZZAR.API) in 52.1149ms
+2025-04-16 19:26:51.574 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.Units (BAKERBAZZAR.API)'
+2025-04-16 19:26:51.574 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/Units - - - 200 - application/json;+charset=utf-8 221.0863ms
+2025-04-16 19:26:51.575 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/Units - -
+2025-04-16 19:26:51.575 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:26:51.575 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.Units (BAKERBAZZAR.API)'
+2025-04-16 19:26:51.575 +05:30  INF  Route matched with {action = "Units", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Units() on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:26:51.580 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:26:51.580 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.Units (BAKERBAZZAR.API) in 5.1659ms
+2025-04-16 19:26:51.580 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.Units (BAKERBAZZAR.API)'
+2025-04-16 19:26:51.581 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/Units - - - 200 - application/json;+charset=utf-8 5.7444ms
+2025-04-16 19:29:30.963 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/user/products?categoryid=3e85ca1f-91c2-42f2-9b05-bd920051c25e - -
+2025-04-16 19:29:30.964 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:29:30.965 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API)'
+2025-04-16 19:29:30.966 +05:30  INF  Route matched with {action = "Products", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Products(System.String, System.String) on controller BAKERBAZZAR.API.Controller.UserController (BAKERBAZZAR.API).
+2025-04-16 19:29:31.407 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:29:31.408 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API) in 442.0042ms
+2025-04-16 19:29:31.409 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API)'
+2025-04-16 19:29:31.409 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/user/products?categoryid=3e85ca1f-91c2-42f2-9b05-bd920051c25e - - - 200 - application/json;+charset=utf-8 447.5420ms
+2025-04-16 19:29:31.410 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/user/products?categoryid=3e85ca1f-91c2-42f2-9b05-bd920051c25e - -
+2025-04-16 19:29:31.411 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:29:31.412 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API)'
+2025-04-16 19:29:31.412 +05:30  INF  Route matched with {action = "Products", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Products(System.String, System.String) on controller BAKERBAZZAR.API.Controller.UserController (BAKERBAZZAR.API).
+2025-04-16 19:29:31.419 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:29:31.419 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API) in 6.8993ms
+2025-04-16 19:29:31.419 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.UserController.Products (BAKERBAZZAR.API)'
+2025-04-16 19:29:31.419 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/user/products?categoryid=3e85ca1f-91c2-42f2-9b05-bd920051c25e - - - 200 - application/json;+charset=utf-8 9.0820ms
+2025-04-16 19:29:44.647 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/Roles - -
+2025-04-16 19:29:44.648 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:29:44.648 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API)'
+2025-04-16 19:29:44.648 +05:30  INF  Route matched with {action = "Roles", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Roles() on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:29:44.666 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:29:44.666 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API) in 17.8073ms
+2025-04-16 19:29:44.666 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API)'
+2025-04-16 19:29:44.666 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/Roles - - - 200 - application/json;+charset=utf-8 19.0082ms
+2025-04-16 19:29:44.668 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/Roles - -
+2025-04-16 19:29:44.669 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:29:44.669 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API)'
+2025-04-16 19:29:44.669 +05:30  INF  Route matched with {action = "Roles", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Roles() on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:29:44.670 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:29:44.670 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API) in 1.7033ms
+2025-04-16 19:29:44.670 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API)'
+2025-04-16 19:29:44.671 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/Roles - - - 200 - application/json;+charset=utf-8 2.1942ms
+2025-04-16 19:31:03.403 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/userlist?role=1 - -
+2025-04-16 19:31:03.404 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:31:03.404 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.UserList (BAKERBAZZAR.API)'
+2025-04-16 19:31:03.405 +05:30  INF  Route matched with {action = "UserList", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] UserList(System.String, Int32) on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:31:03.425 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:31:03.426 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.UserList (BAKERBAZZAR.API) in 20.8121ms
+2025-04-16 19:31:03.426 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.UserList (BAKERBAZZAR.API)'
+2025-04-16 19:31:03.426 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/userlist?role=1 - - - 200 - application/json;+charset=utf-8 24.6463ms
+2025-04-16 19:31:03.428 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/userlist?role=1 - -
+2025-04-16 19:31:03.428 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:31:03.428 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.UserList (BAKERBAZZAR.API)'
+2025-04-16 19:31:03.429 +05:30  INF  Route matched with {action = "UserList", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] UserList(System.String, Int32) on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:31:03.436 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:31:03.437 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.UserList (BAKERBAZZAR.API) in 8.2739ms
+2025-04-16 19:31:03.437 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.UserList (BAKERBAZZAR.API)'
+2025-04-16 19:31:03.437 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/userlist?role=1 - - - 200 - application/json;+charset=utf-8 8.9066ms
+2025-04-16 19:31:07.163 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/Roles - -
+2025-04-16 19:31:07.163 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:31:07.163 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API)'
+2025-04-16 19:31:07.163 +05:30  INF  Route matched with {action = "Roles", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Roles() on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:31:07.172 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:31:07.173 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API) in 9.1226ms
+2025-04-16 19:31:07.173 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API)'
+2025-04-16 19:31:07.173 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/Roles - - - 200 - application/json;+charset=utf-8 9.9393ms
+2025-04-16 19:31:07.175 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/Roles - -
+2025-04-16 19:31:07.175 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:31:07.175 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API)'
+2025-04-16 19:31:07.175 +05:30  INF  Route matched with {action = "Roles", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Roles() on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:31:07.176 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:31:07.177 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API) in 1.7168ms
+2025-04-16 19:31:07.177 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API)'
+2025-04-16 19:31:07.177 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/Roles - - - 200 - application/json;+charset=utf-8 2.2053ms
+2025-04-16 19:35:56.432 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/userlist?role=1 - -
+2025-04-16 19:35:56.435 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:35:56.436 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.UserList (BAKERBAZZAR.API)'
+2025-04-16 19:35:56.438 +05:30  INF  Route matched with {action = "UserList", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] UserList(System.String, Int32) on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:35:56.599 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:35:56.601 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.UserList (BAKERBAZZAR.API) in 163.6156ms
+2025-04-16 19:35:56.602 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.UserList (BAKERBAZZAR.API)'
+2025-04-16 19:35:56.602 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/userlist?role=1 - - - 200 - application/json;+charset=utf-8 171.5438ms
+2025-04-16 19:35:56.604 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/userlist?role=1 - -
+2025-04-16 19:35:56.604 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:35:56.604 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.UserList (BAKERBAZZAR.API)'
+2025-04-16 19:35:56.604 +05:30  INF  Route matched with {action = "UserList", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] UserList(System.String, Int32) on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:35:56.616 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:35:56.616 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.UserList (BAKERBAZZAR.API) in 11.2377ms
+2025-04-16 19:35:56.616 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.UserList (BAKERBAZZAR.API)'
+2025-04-16 19:35:56.616 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/userlist?role=1 - - - 200 - application/json;+charset=utf-8 11.7926ms
+2025-04-16 19:35:57.865 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/Roles - -
+2025-04-16 19:35:57.865 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:35:57.868 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API)'
+2025-04-16 19:35:57.868 +05:30  INF  Route matched with {action = "Roles", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Roles() on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:35:57.914 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:35:57.914 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API) in 45.31ms
+2025-04-16 19:35:57.914 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API)'
+2025-04-16 19:35:57.914 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/Roles - - - 200 - application/json;+charset=utf-8 49.4012ms
+2025-04-16 19:35:57.915 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/Roles - -
+2025-04-16 19:35:57.916 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:35:57.916 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API)'
+2025-04-16 19:35:57.916 +05:30  INF  Route matched with {action = "Roles", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Roles() on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:35:57.917 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:35:57.918 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API) in 1.7296ms
+2025-04-16 19:35:57.918 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.Roles (BAKERBAZZAR.API)'
+2025-04-16 19:35:57.918 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/Roles - - - 200 - application/json;+charset=utf-8 2.4983ms
+2025-04-16 19:36:01.814 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/Warehouse - -
+2025-04-16 19:36:01.814 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:36:01.814 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.Warehouse (BAKERBAZZAR.API)'
+2025-04-16 19:36:01.814 +05:30  INF  Route matched with {action = "Warehouse", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Warehouse(System.String) on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:36:01.833 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:36:01.834 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.Warehouse (BAKERBAZZAR.API) in 20.146ms
+2025-04-16 19:36:01.834 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.Warehouse (BAKERBAZZAR.API)'
+2025-04-16 19:36:01.835 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/Warehouse - - - 200 - application/json;+charset=utf-8 20.8622ms
+2025-04-16 19:36:01.837 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/Warehouse - -
+2025-04-16 19:36:01.837 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:36:01.837 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.Warehouse (BAKERBAZZAR.API)'
+2025-04-16 19:36:01.837 +05:30  INF  Route matched with {action = "Warehouse", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Warehouse(System.String) on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:36:01.839 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:36:01.839 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.Warehouse (BAKERBAZZAR.API) in 1.7948ms
+2025-04-16 19:36:01.839 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.Warehouse (BAKERBAZZAR.API)'
+2025-04-16 19:36:01.839 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/Warehouse - - - 200 - application/json;+charset=utf-8 2.2215ms
+2025-04-16 19:36:03.062 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/Admin/GetCategoryByWarehouse?warehouseid=1 - -
+2025-04-16 19:36:03.062 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:36:03.062 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.GetCategoryByWarehouseId (BAKERBAZZAR.API)'
+2025-04-16 19:36:03.062 +05:30  INF  Route matched with {action = "GetCategoryByWarehouseId", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] GetCategoryByWarehouseId(Int32) on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:36:03.101 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:36:03.101 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.GetCategoryByWarehouseId (BAKERBAZZAR.API) in 38.6404ms
+2025-04-16 19:36:03.101 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.GetCategoryByWarehouseId (BAKERBAZZAR.API)'
+2025-04-16 19:36:03.101 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/Admin/GetCategoryByWarehouse?warehouseid=1 - - - 200 - application/json;+charset=utf-8 39.3983ms
+2025-04-16 19:36:03.102 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/Admin/GetCategoryByWarehouse?warehouseid=1 - -
+2025-04-16 19:36:03.102 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:36:03.102 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.GetCategoryByWarehouseId (BAKERBAZZAR.API)'
+2025-04-16 19:36:03.102 +05:30  INF  Route matched with {action = "GetCategoryByWarehouseId", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] GetCategoryByWarehouseId(Int32) on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:36:03.104 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:36:03.104 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.GetCategoryByWarehouseId (BAKERBAZZAR.API) in 2.0361ms
+2025-04-16 19:36:03.104 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.GetCategoryByWarehouseId (BAKERBAZZAR.API)'
+2025-04-16 19:36:03.104 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/Admin/GetCategoryByWarehouse?warehouseid=1 - - - 200 - application/json;+charset=utf-8 2.3437ms
+2025-04-16 19:36:30.899 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/Warehouse - -
+2025-04-16 19:36:30.900 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:36:30.900 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.Warehouse (BAKERBAZZAR.API)'
+2025-04-16 19:36:30.900 +05:30  INF  Route matched with {action = "Warehouse", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Warehouse(System.String) on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:36:30.928 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:36:30.928 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.Warehouse (BAKERBAZZAR.API) in 28.2637ms
+2025-04-16 19:36:30.928 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.Warehouse (BAKERBAZZAR.API)'
+2025-04-16 19:36:30.928 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/Warehouse - - - 200 - application/json;+charset=utf-8 29.2707ms
+2025-04-16 19:36:30.930 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/admin/Warehouse - -
+2025-04-16 19:36:30.930 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:36:30.930 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.Warehouse (BAKERBAZZAR.API)'
+2025-04-16 19:36:30.930 +05:30  INF  Route matched with {action = "Warehouse", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] Warehouse(System.String) on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:36:30.937 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:36:30.938 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.Warehouse (BAKERBAZZAR.API) in 7.1504ms
+2025-04-16 19:36:30.938 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.Warehouse (BAKERBAZZAR.API)'
+2025-04-16 19:36:30.938 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/admin/Warehouse - - - 200 - application/json;+charset=utf-8 7.7590ms
+2025-04-16 19:36:32.350 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/Admin/GetCategoryByWarehouse?warehouseid=3 - -
+2025-04-16 19:36:32.350 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:36:32.350 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.GetCategoryByWarehouseId (BAKERBAZZAR.API)'
+2025-04-16 19:36:32.350 +05:30  INF  Route matched with {action = "GetCategoryByWarehouseId", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] GetCategoryByWarehouseId(Int32) on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:36:32.370 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:36:32.370 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.GetCategoryByWarehouseId (BAKERBAZZAR.API) in 19.9245ms
+2025-04-16 19:36:32.370 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.GetCategoryByWarehouseId (BAKERBAZZAR.API)'
+2025-04-16 19:36:32.370 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/Admin/GetCategoryByWarehouse?warehouseid=3 - - - 200 - application/json;+charset=utf-8 20.4938ms
+2025-04-16 19:36:32.371 +05:30  INF  Request starting HTTP/1.1 GET http://192.168.29.170:5145/Admin/GetCategoryByWarehouse?warehouseid=3 - -
+2025-04-16 19:36:32.371 +05:30  INF  CORS policy execution successful.
+2025-04-16 19:36:32.372 +05:30  INF  Executing endpoint 'BAKERBAZZAR.API.Controller.AdminController.GetCategoryByWarehouseId (BAKERBAZZAR.API)'
+2025-04-16 19:36:32.372 +05:30  INF  Route matched with {action = "GetCategoryByWarehouseId", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BAKERBAZZAR.API.Models.ApiResponse]] GetCategoryByWarehouseId(Int32) on controller BAKERBAZZAR.API.Controller.AdminController (BAKERBAZZAR.API).
+2025-04-16 19:36:32.375 +05:30  INF  Executing ObjectResult, writing value of type 'BAKERBAZZAR.API.Models.ApiResponse'.
+2025-04-16 19:36:32.375 +05:30  INF  Executed action BAKERBAZZAR.API.Controller.AdminController.GetCategoryByWarehouseId (BAKERBAZZAR.API) in 3.2495ms
+2025-04-16 19:36:32.375 +05:30  INF  Executed endpoint 'BAKERBAZZAR.API.Controller.AdminController.GetCategoryByWarehouseId (BAKERBAZZAR.API)'
+2025-04-16 19:36:32.375 +05:30  INF  Request finished HTTP/1.1 GET http://192.168.29.170:5145/Admin/GetCategoryByWarehouse?warehouseid=3 - - - 200 - application/json;+charset=utf-8 3.8535ms

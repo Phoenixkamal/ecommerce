@@ -1,5 +1,7 @@
 ﻿
 using BAKERBAZZAR.API.Entities;
+using System;
+using static System.Collections.Specialized.BitVector32;
 
 namespace BAKERBAZZAR.API.Services
 {
@@ -9,7 +11,13 @@ namespace BAKERBAZZAR.API.Services
         Task<bool> SetUserAccessToken(string id, string accessToken, string refreshToken);
         //Task<User?> GetUserByRefreshToken(TokenRequest tokenRequest);
         Task<List<Category>?> GetCategory(string keyword = "");
-        Task<List<Product>?> GetProduct(string categoryid = "", string keyword = "");
+        //Task<List<SetUser>?> GetUsers(string keyword = "");
+        //Task<List<SetUser>?> GetUser(string keyword = "");
+        //Task<List<Roles>?> GetRoles();
+        //Task<List<Units>?> GetUnits();
+        //Task<List<clsWarehouse>?> GetWarehouse();
+        Task<List<Product>?> GetProduct(string categoryid = "", string keyword = ""); 
+        Task<List<Product>?> GetWishlist(string action, string userid, int productid);
         Task<ProductDetails?> GetProductDetails(string productid = "");
         Task<MyOrders?> GetMyOrders(string userdisplayid, string keyword = "", string code = "");
         Task<OrderDetails?> GetOrderDetails(string displayid = "");
@@ -21,9 +29,13 @@ namespace BAKERBAZZAR.API.Services
         Task<bool> UpdateItemQty(int linerid, int qty);
         Task<List<clsAddress>?> GetAddress(string userdisplayid);
         Task<bool> UpsetAddress(SetAddress addrs);
+        //Task<bool> UpsetProduct(Product product);
+        //Task<bool> UpsetCategory(EditCategory addrs);
         Task<SetAddress?> GetUserAddress(int recordid);
+        //Task<Category?> GetCategoryById(int recordid);
         Task<bool> UpdateDefaultAddress(string displayid, int recordid);
-        Task<bool> UpdateProfile(clsProfile profile);
+        Task<bool> UpdateProfile(clsProfile profile,string fileurl);
+        //Task<bool> UpdateProduct(ProductDetails product);
         Task<Dashboard?> GetDashboardDetails(string userdisplayid);
         Task<MyOrders?> GetDeliveryAgentOrders(string displayid, string keyword = "", string code = "");
 
@@ -66,6 +78,9 @@ namespace BAKERBAZZAR.API.Services
 
             //return result?.Count > 0 ? result[0] : null;
         }
+
+
+
         public async Task<List<Product>?> GetProduct(string categoryid = "",string keyword = "")
         {
             SqlParameter[] param = {
@@ -77,6 +92,17 @@ namespace BAKERBAZZAR.API.Services
             //var result = await Task.Run(() => SqlUtility.ExecuteProcedureReturnObject<Categories?> ("BB_GetCategory", param));
 
             //return result?.Count > 0 ? result[0] : null;
+        }
+
+        public async Task<List<Product>?> GetWishlist(string action, string userid, int productid)
+        {
+            SqlParameter[] param = {
+                new SqlParameter("@action",action),
+                new SqlParameter("@UserId",userid),
+                new SqlParameter("@ProductId",productid)
+            };
+
+            return await Task.Run(() => JsonConvert.DeserializeObject<List<Product>?>(SqlUtility.ExecuteProcedureReturnString("BB_ManageWishlist", param)));
         }
         public async Task<ProductDetails?> GetProductDetails(string productid = "")
         {
@@ -200,7 +226,8 @@ namespace BAKERBAZZAR.API.Services
                 new SqlParameter("@RecordId",addrs.recordid)
             };
             return await Task.Run(() => SqlUtility.ExecuteProcedure("BB_UpsetAddress", param));
-        }
+        } 
+
         public async Task<SetAddress?> GetUserAddress(int recordid)
         {
             SqlParameter[] param = {
@@ -209,7 +236,7 @@ namespace BAKERBAZZAR.API.Services
 
             return await Task.Run(() => JsonConvert.DeserializeObject<SetAddress?>(SqlUtility.ExecuteProcedureReturnString("BB_GetAddressByRecordId", param)));
 
-        }
+        }  
         public async Task<bool> UpdateDefaultAddress(string displayid, int recordid)
         {
             SqlParameter[] param = {
@@ -219,7 +246,7 @@ namespace BAKERBAZZAR.API.Services
 
             return await Task.Run(() => SqlUtility.ExecuteProcedure("BB_UpdateDefaultAddress", param));
         }
-        public async Task<bool> UpdateProfile(clsProfile profile)
+        public async Task<bool> UpdateProfile(clsProfile profile,string fileurl)
         {
 
             SqlParameter[] param = {
@@ -227,10 +254,13 @@ namespace BAKERBAZZAR.API.Services
                 new SqlParameter("@Name",profile.name),               
                 new SqlParameter("@PhoneNo",profile.phoneno),
                 new SqlParameter("@Email",profile.email),
-                new SqlParameter("@Password",profile.password)
+                new SqlParameter("@Password",profile.password),
+                new SqlParameter("@profileimage",fileurl)
             };
             return await Task.Run(() => SqlUtility.ExecuteProcedure("BB_UpdateProfile", param));
         }
+
+
         public async Task<Dashboard?> GetDashboardDetails(string userdisplayid)
         {
             SqlParameter[] param = {

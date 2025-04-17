@@ -17,4 +17,12 @@
         public string? type { get; set; }
    
 }
+    public class EditCategory
+    {
+        public string mode { get; set; }
+        public int? RecordId { get; set; }
+        public string? CategoryName { get; set; }
+        public string? CategoryImage { get; set; }
+        //public DateTime? LastModified { get; set; }
+    }
 }

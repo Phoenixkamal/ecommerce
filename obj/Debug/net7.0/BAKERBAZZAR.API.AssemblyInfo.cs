@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BAKERBAZZAR.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79404bfc7fb24bb43b42c0968cd1dbf0d37bdd38")]
 [assembly: System.Reflection.AssemblyProductAttribute("BAKERBAZZAR.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BAKERBAZZAR.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

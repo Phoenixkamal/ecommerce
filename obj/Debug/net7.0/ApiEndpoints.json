@@ -63,6 +63,47 @@
   },
   {
     "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
+    "Method": "Upload",
+    "RelativePath": "Admin/CategoryImageUpload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
     "Method": "DeleteInventoryItem",
     "RelativePath": "Admin/DeleteInventoryItem",
     "HttpMethod": "DELETE",
@@ -97,6 +138,120 @@
     "Parameters": [
       {
         "Name": "itemdispalyid",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BAKERBAZZAR.API.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
+    "Method": "GetCategoryByWarehouseId",
+    "RelativePath": "Admin/GetCategoryByWarehouse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "warehouseid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BAKERBAZZAR.API.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
+    "Method": "GetCategoryById",
+    "RelativePath": "Admin/GetEditCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "recordid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BAKERBAZZAR.API.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
+    "Method": "GetProductsByCridWrid",
+    "RelativePath": "Admin/GetProductsByCridWrid",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryrid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "warhouserid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BAKERBAZZAR.API.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
+    "Method": "UserById",
+    "RelativePath": "Admin/GetUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "displayId",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -182,6 +337,144 @@
   },
   {
     "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
+    "Method": "ProductImageUpload",
+    "RelativePath": "Admin/ProductImageUpload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "categoryName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
+    "Method": "Roles",
+    "RelativePath": "Admin/Roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "BAKERBAZZAR.API.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
+    "Method": "Units",
+    "RelativePath": "Admin/Units",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "BAKERBAZZAR.API.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
+    "Method": "UpdateProduct",
+    "RelativePath": "Admin/UpdateProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "setAddrs",
+        "Type": "BAKERBAZZAR.API.Entities.ProductDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BAKERBAZZAR.API.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
+    "Method": "UpsetCategory",
+    "RelativePath": "Admin/UpsetCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "setAddrs",
+        "Type": "BAKERBAZZAR.API.Models.IO_Templates.EditCategory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BAKERBAZZAR.API.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
     "Method": "UpsetInventoryItem",
     "RelativePath": "Admin/UpsetInventoryItem",
     "HttpMethod": "POST",
@@ -191,6 +484,32 @@
       {
         "Name": "inventoryReq",
         "Type": "BAKERBAZZAR.API.Models.IO_Templates.InventoryItemRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BAKERBAZZAR.API.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
+    "Method": "UpsetProduct",
+    "RelativePath": "Admin/UpsetProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "BAKERBAZZAR.API.Entities.Product",
         "IsRequired": true
       }
     ],
@@ -267,6 +586,37 @@
     "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
     "Method": "UserList",
     "RelativePath": "Admin/UserList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "role",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BAKERBAZZAR.API.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.AdminController",
+    "Method": "Warehouse",
+    "RelativePath": "Admin/Warehouse",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -748,9 +1098,64 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "setAddrs",
-        "Type": "BAKERBAZZAR.API.Entities.clsProfile",
-        "IsRequired": true
+        "Name": "userdisplayid",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "phoneno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "profileImage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -777,6 +1182,42 @@
         "Name": "setAddrs",
         "Type": "BAKERBAZZAR.API.Models.IO_Templates.SetAddress",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BAKERBAZZAR.API.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BAKERBAZZAR.API.Controller.UserController",
+    "Method": "Wishlist",
+    "RelativePath": "User/Wishlist",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "action",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userid",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "productid",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [

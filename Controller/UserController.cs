@@ -43,6 +43,32 @@ namespace BAKERBAZZAR.API.Controller
             return StatusCode(_outputdata.code, _outputdata);
         }
 
+        [HttpGet("Wishlist")]
+        public async Task<ActionResult<ApiResponse>> Wishlist(string action, string userid, int productid)
+        {
+            ApiResponse _outputdata = new ApiResponse();
+
+            try
+            {
+                List<Product>? _wishlistdata = await _userService.GetWishlist(action,userid,productid);
+
+                if (_wishlistdata == null)
+                {
+                    _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.NotFound; _outputdata.message = HttpStatusMessages.Result_Notfound;
+                }
+                else
+                {
+                    _outputdata.responsedata = _wishlistdata;
+                }
+            }
+            catch (Exception ex)
+            {
+                _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
+            }
+
+            return StatusCode(_outputdata.code, _outputdata);
+        }
+
         [HttpGet("Products")]
         public async Task<ActionResult<ApiResponse>> Products(string categoryid = "", string keyword = "")
         {
@@ -321,7 +347,8 @@ namespace BAKERBAZZAR.API.Controller
                 _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
             }
             return StatusCode(_outputdata.code, _outputdata);
-        }
+        } 
+       
 
         [HttpGet("GetUserAddress")]
         public async Task<ActionResult<ApiResponse>> GetUserAddress(string mode, int recordid = -999)
@@ -357,6 +384,9 @@ namespace BAKERBAZZAR.API.Controller
 
             return StatusCode(_outputdata.code, _outputdata);
         }
+
+
+
         [HttpPut("ChangeAddress")]
         public async Task<ActionResult<ApiResponse>> ChangeAddress(string displayid, int recordid)
         {
@@ -382,28 +412,72 @@ namespace BAKERBAZZAR.API.Controller
             return StatusCode(_outputdata.code, _outputdata);
         }
         [HttpPost("UpdateProfile")]
-        public async Task<ActionResult<ApiResponse>> UpdateProfile([FromBody] clsProfile setAddrs)
+        public async Task<ActionResult<ApiResponse>> UpdateProfile([FromForm] clsProfile setAddrs , [FromForm] IFormFile? file)
         {
+            string filepath="";
+            if (file != null)
+            {
+                if (file == null || file.Length == 0)
+                    return BadRequest("No file uploaded.");
+
+                var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
+                var fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
+
+                if (!allowedExtensions.Contains(fileExtension))
+                    return BadRequest("Invalid file type.");
+
+                string frontendPath = Path.Combine(Directory.GetCurrentDirectory(), "..", "frontend", "src", "assets", "UploadedImages", "Users");
+
+                if (!Directory.Exists(frontendPath))
+                {
+                    Directory.CreateDirectory(frontendPath);
+                }
+
+                string originalFileName = Path.GetFileNameWithoutExtension(file.FileName);
+                string timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+                string fileName = $"{originalFileName}_{timestamp}{fileExtension}";
+                string filePath = Path.Combine(frontendPath, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+                filepath = $"/assets/UploadedImages/Users/{fileName}";
+            }
+
             ApiResponse _outputdata = new ApiResponse();
             try
             {
+
                 if (!string.IsNullOrWhiteSpace(setAddrs.userdisplayid))
                 {
-                    await _userService.UpdateProfile(setAddrs);
-                    _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.Ok; _outputdata.message = HttpStatusMessages.Ok;
-
+                    if (file != null)
+                    {
+                        await _userService.UpdateProfile(setAddrs, filepath);
+                        _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.Ok; _outputdata.message = HttpStatusMessages.Ok; _outputdata.responsedata = filepath;
+                    }
+                    else
+                    {
+                        await _userService.UpdateProfile(setAddrs, setAddrs.profileImage);
+                        _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.Ok; _outputdata.message = HttpStatusMessages.Ok; _outputdata.responsedata = filepath;
+                    }
                 }
                 else
                 {
                     _outputdata.code = HttpCode.BadRequest; _outputdata.status = HttpStatus.BadRequest; _outputdata.message = HttpStatusMessages.CartItemAdd_BadRequest;
                 }
+
             }
             catch (Exception ex)
             {
                 _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
             }
             return StatusCode(_outputdata.code, _outputdata);
+
         }
+
+
         [HttpGet("Dashboard")]
         public async Task<ActionResult<ApiResponse>> Dashboard(string displayid)
         {

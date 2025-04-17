@@ -226,3 +226,64 @@ C:\Users\kamal\OneDrive\Desktop\code\BakerBazzar\API Code\BAKERBAZZAR.API\obj\De
 C:\Users\kamal\OneDrive\Desktop\code\BakerBazzar\API Code\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.pdb
 C:\Users\kamal\OneDrive\Desktop\code\BakerBazzar\API Code\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.genruntimeconfig.cache
 C:\Users\kamal\OneDrive\Desktop\code\BakerBazzar\API Code\BAKERBAZZAR.API\obj\Debug\net7.0\ref\BAKERBAZZAR.API.dll
+C:\Users\kamal\OneDrive\Desktop\code\BakerBazzar\API Code\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.sourcelink.json
+C:\Users\kamal\OneDrive\Desktop\code\BakerBazzar\API Code\BAKERBAZZAR.API\bin\Debug\net7.0\BAKERBAZZAR.API.staticwebassets.runtime.json
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\appsettings.json
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\BAKERBAZZAR.API.staticwebassets.runtime.json
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\BAKERBAZZAR.API.exe
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\BAKERBAZZAR.API.deps.json
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\BAKERBAZZAR.API.runtimeconfig.json
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\BAKERBAZZAR.API.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\BAKERBAZZAR.API.pdb
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Serilog.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Serilog.AspNetCore.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Serilog.Extensions.Hosting.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Serilog.Settings.Configuration.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Serilog.Sinks.Debug.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Serilog.Sinks.File.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.csproj.AssemblyReference.cache
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.AssemblyInfoInputs.cache
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.AssemblyInfo.cs
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.csproj.CoreCompileInputs.cache
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.sourcelink.json
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\staticwebassets\msbuild.BAKERBAZZAR.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\staticwebassets\msbuild.build.BAKERBAZZAR.API.props
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.BAKERBAZZAR.API.props
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.BAKERBAZZAR.API.props
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\scopedcss\bundle\BAKERBAZZAR.API.styles.css
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZ.F48AF710.Up2Date
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\refint\BAKERBAZZAR.API.dll
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.pdb
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\BAKERBAZZAR.API.genruntimeconfig.cache
+C:\Users\kamal\OneDrive\Desktop\code\ecommerce\BAKERBAZZAR.API\obj\Debug\net7.0\ref\BAKERBAZZAR.API.dll

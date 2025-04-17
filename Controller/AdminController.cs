@@ -27,6 +27,351 @@ namespace BAKERBAZZAR.API.Controller
         //    return StatusCode(_outputdata.code, _outputdata);
         //}
 
+
+        [HttpGet("GetEditCategory")]
+        public async Task<ActionResult<ApiResponse>> GetCategoryById(string mode, int recordid = -999)
+        {
+            ApiResponse _outputdata = new ApiResponse();
+
+            try
+            {
+                if (mode == "addnew")
+                {
+                    _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.NotFound; _outputdata.message = HttpStatusMessages.Result_Notfound;
+
+                }
+                else
+                {
+                    Category _userdata = await _adminService.GetCategoryById(recordid);
+
+                    if (_userdata == null)
+                    {
+                        _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.NotFound; _outputdata.message = HttpStatusMessages.Result_Notfound;
+                    }
+                    else
+                    {
+                        _outputdata.responsedata = _userdata;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
+            }
+
+            return StatusCode(_outputdata.code, _outputdata);
+        }        
+        [HttpGet("GetCategoryByWarehouse")]
+        public async Task<ActionResult<ApiResponse>> GetCategoryByWarehouseId(int warehouseid)
+        {
+            ApiResponse _outputdata = new ApiResponse();
+
+            try
+            {
+                    List<Category>? _userdata = await _adminService.GetCategoryByWarehouseId(warehouseid);
+
+                    if (_userdata == null)
+                    {
+                        _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.NotFound; _outputdata.message = HttpStatusMessages.Result_Notfound;
+                    }
+                    else
+                    {
+                        _outputdata.responsedata = _userdata;
+                    }
+
+            }
+            catch (Exception ex)
+            {
+                _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
+            }
+
+            return StatusCode(_outputdata.code, _outputdata);
+        }   
+        
+        [HttpGet("GetProductsByCridWrid")]
+        public async Task<ActionResult<ApiResponse>> GetProductsByCridWrid(int categoryrid,int warhouserid)
+        {
+            ApiResponse _outputdata = new ApiResponse();
+
+            try
+            {
+                    List<Product>? _userdata = await _adminService.GetProductsByCridWrid(categoryrid,warhouserid);
+
+                    if (_userdata == null)
+                    {
+                        _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.NotFound; _outputdata.message = HttpStatusMessages.Result_Notfound;
+                    }
+                    else
+                    {
+                        _outputdata.responsedata = _userdata;
+                    }
+
+            }
+            catch (Exception ex)
+            {
+                _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
+            }
+
+            return StatusCode(_outputdata.code, _outputdata);
+        }
+
+        [HttpPost("CategoryImageUpload")]
+        public IActionResult Upload([FromForm] IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("No file uploaded.");
+
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+            var fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
+
+            if (!allowedExtensions.Contains(fileExtension))
+                return BadRequest("Invalid file type.");
+
+            string frontendPath = Path.Combine(Directory.GetCurrentDirectory(), "..", "frontend", "src", "assets", "UploadedImages", "Products", "Category");
+
+            if (!Directory.Exists(frontendPath))
+            {
+                Directory.CreateDirectory(frontendPath);
+            }
+
+            string originalFileName = Path.GetFileNameWithoutExtension(file.FileName);
+            string timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+            string fileName = $"{originalFileName}_{timestamp}{fileExtension}";
+
+            string filePath = Path.Combine(frontendPath, fileName);
+
+            try
+            {
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+                string fileUrl = $"../UploadedImages/Products/Category/{fileName}";
+                return Ok(new { path = fileUrl });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpPost("ProductImageUpload")]
+        public IActionResult ProductImageUpload([FromForm] IFormFile file, [FromForm] string categoryName)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("No file uploaded.");
+
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+            var fileExtension = Path.GetExtension(file.FileName).ToLowerInvariant();
+
+            if (!allowedExtensions.Contains(fileExtension))
+                return BadRequest("Invalid file type.");
+
+            string frontendPath = Path.Combine(Directory.GetCurrentDirectory(), "..", "frontend", "src", "assets", "UploadedImages", "Products", "Category", categoryName);
+
+            if (!Directory.Exists(frontendPath))
+            {
+                Directory.CreateDirectory(frontendPath);
+            }
+
+            string originalFileName = Path.GetFileNameWithoutExtension(file.FileName);
+            string timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+            string fileName = $"{originalFileName}_{timestamp}{fileExtension}";
+
+            string filePath = Path.Combine(frontendPath, fileName);
+
+            try
+            {
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+                string fileUrl = $"../UploadedImages/Products/Category/{categoryName}/{fileName}";
+                return Ok(new { path = fileUrl });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpGet("GetUser")]
+        public async Task<ActionResult<ApiResponse>> UserById(string displayId = "")
+        {
+            ApiResponse _outputdata = new ApiResponse();
+
+            try
+            {
+                List<SetUser>? _userdata = await _adminService.GetUser(displayId);
+
+                if (_userdata == null)
+                {
+                    _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.NotFound; _outputdata.message = HttpStatusMessages.Result_Notfound;
+                }
+                else
+                {
+                    _outputdata.responsedata = _userdata;
+                }
+            }
+            catch (Exception ex)
+            {
+                _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
+            }
+
+            return StatusCode(_outputdata.code, _outputdata);
+        }
+
+        [HttpPost("UpsetProduct")]
+        public async Task<ActionResult<ApiResponse>> UpsetProduct([FromBody] Product product)
+        {
+            ApiResponse _outputdata = new ApiResponse();
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(product.mode))
+                {
+                    await _adminService.UpsetProduct(product);
+                    _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.Ok; _outputdata.message = HttpStatusMessages.Ok;
+                }
+                else
+                {
+                    _outputdata.code = HttpCode.BadRequest; _outputdata.status = HttpStatus.BadRequest; _outputdata.message = HttpStatusMessages.CartItemAdd_BadRequest;
+                }
+            }
+            catch (Exception ex)
+            {
+                _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
+            }
+            return StatusCode(_outputdata.code, _outputdata);
+        }
+
+        [HttpGet("Units")]
+        public async Task<ActionResult<ApiResponse>> Units()
+        {
+            ApiResponse _outputdata = new ApiResponse();
+
+            try
+            {
+                List<Units>? _categorydata = await _adminService.GetUnits();
+
+                if (_categorydata == null)
+                {
+                    _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.NotFound; _outputdata.message = HttpStatusMessages.Result_Notfound;
+                }
+                else
+                {
+                    _outputdata.responsedata = _categorydata;
+                }
+            }
+            catch (Exception ex)
+            {
+                _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
+            }
+
+            return StatusCode(_outputdata.code, _outputdata);
+        }
+
+        [HttpGet("Warehouse")]
+        public async Task<ActionResult<ApiResponse>> Warehouse(string keyword = "")
+        {
+            ApiResponse _outputdata = new ApiResponse();
+
+            try
+            {
+                List<clsWarehouse>? _warehousedata = await _adminService.GetWarehouse();
+
+                if (_warehousedata == null)
+                {
+                    _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.NotFound; _outputdata.message = HttpStatusMessages.Result_Notfound;
+                }
+                else
+                {
+                    _outputdata.responsedata = _warehousedata;
+                }
+            }
+            catch (Exception ex)
+            {
+                _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
+            }
+
+            return StatusCode(_outputdata.code, _outputdata);
+        }
+        [HttpGet("Roles")]
+        public async Task<ActionResult<ApiResponse>> Roles()
+        {
+            ApiResponse _outputdata = new ApiResponse();
+
+            try
+            {
+                List<Roles>? _roles = await _adminService.GetRoles   ();
+
+                if (_roles == null)
+                {
+                    _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.NotFound; _outputdata.message = HttpStatusMessages.Result_Notfound;
+                }
+                else
+                {
+                    _outputdata.responsedata = _roles;
+                }
+            }
+            catch (Exception ex)
+            {
+                _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
+            }
+
+            return StatusCode(_outputdata.code, _outputdata);
+        }
+
+        [HttpPost("UpdateProduct")]
+        public async Task<ActionResult<ApiResponse>> UpdateProduct([FromBody] ProductDetails setAddrs)
+        {
+            ApiResponse _outputdata = new ApiResponse();
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(setAddrs.ProductDetail.ProductId))
+                {
+                    await _adminService.UpdateProduct(setAddrs);
+                    _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.Ok; _outputdata.message = HttpStatusMessages.Ok;
+
+                }
+                else
+                {
+                    _outputdata.code = HttpCode.BadRequest; _outputdata.status = HttpStatus.BadRequest; _outputdata.message = HttpStatusMessages.CartItemAdd_BadRequest;
+                }
+            }
+            catch (Exception ex)
+            {
+                _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
+            }
+            return StatusCode(_outputdata.code, _outputdata);
+        }
+
+        [HttpPost("UpsetCategory")]
+        public async Task<ActionResult<ApiResponse>> UpsetCategory([FromBody] EditCategory setAddrs)
+        {
+            ApiResponse _outputdata = new ApiResponse();
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(setAddrs.mode))
+                {
+                    await _adminService.UpsetCategory(setAddrs);
+                    _outputdata.code = HttpCode.Ok; _outputdata.status = HttpStatus.Ok; _outputdata.message = HttpStatusMessages.Ok;
+
+                }
+                else
+                {
+                    _outputdata.code = HttpCode.BadRequest; _outputdata.status = HttpStatus.BadRequest; _outputdata.message = HttpStatusMessages.CartItemAdd_BadRequest;
+                }
+            }
+            catch (Exception ex)
+            {
+                _outputdata.code = HttpCode.ExpectationFailed; _outputdata.status = HttpStatus.ExpectationFailed; _outputdata.message = ex.Message;
+            }
+            return StatusCode(_outputdata.code, _outputdata);
+        }
+
         [HttpGet("Inventory")]
         public async Task<ActionResult<ApiResponse>> Inventory(string categoryid = "", string keyword = "")
         {
@@ -163,13 +508,13 @@ namespace BAKERBAZZAR.API.Controller
         }
 
         [HttpGet("UserList")]
-        public async Task<ActionResult<ApiResponse>> UserList(string keyword = "")
+        public async Task<ActionResult<ApiResponse>> UserList(string keyword = "",int role=0)
         {
             ApiResponse _outputdata = new ApiResponse();
 
             try
             {
-                List<User>? _userdata = await _adminService.GetUserList(keyword);
+                List<User>? _userdata = await _adminService.GetUserList(keyword,role);
 
                 if (_userdata == null)
                 {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\BakerBazzar\\API Code\\BAKERBAZZAR.API\\BAKERBAZZAR.API.csproj": {}
+    "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\ecommerce\\BAKERBAZZAR.API\\BAKERBAZZAR.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\BakerBazzar\\API Code\\BAKERBAZZAR.API\\BAKERBAZZAR.API.csproj": {
+    "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\ecommerce\\BAKERBAZZAR.API\\BAKERBAZZAR.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\BakerBazzar\\API Code\\BAKERBAZZAR.API\\BAKERBAZZAR.API.csproj",
+        "projectUniqueName": "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\ecommerce\\BAKERBAZZAR.API\\BAKERBAZZAR.API.csproj",
         "projectName": "BAKERBAZZAR.API",
-        "projectPath": "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\BakerBazzar\\API Code\\BAKERBAZZAR.API\\BAKERBAZZAR.API.csproj",
+        "projectPath": "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\ecommerce\\BAKERBAZZAR.API\\BAKERBAZZAR.API.csproj",
         "packagesPath": "C:\\Users\\kamal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\BakerBazzar\\API Code\\BAKERBAZZAR.API\\obj\\",
+        "outputPath": "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\ecommerce\\BAKERBAZZAR.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kamal\\AppData\\Roaming\\NuGet\\NuGet.Config",

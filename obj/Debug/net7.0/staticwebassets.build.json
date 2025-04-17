@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "bI5vNsjlayeXO9RgQfa15ZnKzTWXsj9Ox3AJIWGhNCE=",
+  "Hash": "2nqmBy8F9uU3ZJanHNsbB+YKYdJZYkAUQcDRnREYjE0=",
   "Source": "BAKERBAZZAR.API",
   "BasePath": "_content/BAKERBAZZAR.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "BAKERBAZZAR.API\\wwwroot",
+      "Source": "BAKERBAZZAR.API",
+      "ContentRoot": "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\ecommerce\\BAKERBAZZAR.API\\wwwroot\\",
+      "BasePath": "_content/BAKERBAZZAR.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\ecommerce\\BAKERBAZZAR.API\\wwwroot\\UploadedImages\\Products\\Category\\5a8f9249-098c-481b-9d25-9b6f1498ba95.jpg",
+      "SourceId": "BAKERBAZZAR.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\ecommerce\\BAKERBAZZAR.API\\wwwroot\\",
+      "BasePath": "_content/BAKERBAZZAR.API",
+      "RelativePath": "UploadedImages/Products/Category/5a8f9249-098c-481b-9d25-9b6f1498ba95.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UploadedImages\\Products\\Category\\5a8f9249-098c-481b-9d25-9b6f1498ba95.jpg"
+    }
+  ]
 }

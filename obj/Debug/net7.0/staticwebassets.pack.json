@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\kamal\\OneDrive\\Desktop\\code\\ecommerce\\BAKERBAZZAR.API\\wwwroot\\UploadedImages\\Products\\Category\\5a8f9249-098c-481b-9d25-9b6f1498ba95.jpg",
+      "PackagePath": "staticwebassets\\UploadedImages\\Products\\Category\\5a8f9249-098c-481b-9d25-9b6f1498ba95.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BAKERBAZZAR.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BAKERBAZZAR.API.props",
+      "PackagePath": "build\\BAKERBAZZAR.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BAKERBAZZAR.API.props",
+      "PackagePath": "buildMultiTargeting\\BAKERBAZZAR.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BAKERBAZZAR.API.props",
+      "PackagePath": "buildTransitive\\BAKERBAZZAR.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

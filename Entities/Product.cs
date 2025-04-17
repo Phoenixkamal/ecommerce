@@ -6,11 +6,20 @@
 
         public Product? ProductDetail { get; set; }      
         public List<clsVarient>? Varients { get; set; }
+    } 
+    public class WishlistDetails
+    {
+        public string? action { get; set; }
+        public int? productRId { get; set; }
+        public string? userId { get; set; }
+        public List<Product>? ProductDetail { get; set; }      
+        public List<clsVarient>? Varients { get; set; }
     }
     [Serializable]
-    public class Product
+    public class Product    
     {
         [Key]
+        public string? mode { get; set; }
         public int RecordId { get; set; }
         public Guid? DisplayId { get; set; } = Guid.Empty;
         public string? Supplier { get; set; }
@@ -41,8 +50,12 @@
         public double BulkQuantityPrice { get; set; }
         public bool EnableBarCodeSticker { get; set; }
         public string? ProductImagePath { get; set; }
+        public int? CategoryRId { get; set; }
+        public int? WarehouseId { get; set; }
+        public int? VarientName { get; set; }
+        public bool? IsDefaultVarient { get; set; }
 
-        //public List<clsVarient>? Varients { get; set; }
+        public List<clsVarient>? Varient { get; set; }
     }
     [Serializable]
     public class clsVarient
@@ -53,5 +66,9 @@
         public int Varient { get; set; }
         public string? Unit { get; set; }
         public double? SellingPrice { get; set; }     
+        public bool? IsDefaultVarient { get; set; }  
+        public int RetailPrice { get; set; }
     }
+
+
 }
