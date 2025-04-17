@@ -7,14 +7,13 @@ import api from '../../../api/api'
 import { useNavigate } from 'react-router-dom'
 
 const Checkout = () => {
-  const { checkOutItem,setOrdersInfo,setCartCount } = useContext(DataContext)
+  const { checkOutItem,setCartCount } = useContext(DataContext)
   const UserData = JSON.parse(localStorage.getItem('userdata'))
   let navigate = useNavigate()
 
   useEffect(() => {
     console.log(checkOutItem)
-    setOrdersInfo(checkOutItem)
-  }, [])
+  }, [checkOutItem])
 
   async function handleClick() {
     try {

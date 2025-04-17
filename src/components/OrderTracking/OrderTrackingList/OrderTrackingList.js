@@ -10,7 +10,7 @@ const OrderTrackingList = ({ orderStatus , orders}) => {
                 </div>
                 <div className={ots.content}>
                     <div className={ots.contentHead}>
-                        Order Confirm <span className={ots.date}>{orders.header.placedOn}</span>
+                        Ordered  <span className={ots.date}>{orders.header.placedOn}</span>
                     </div>
                     <div className={ots.contentDescription}>
                         We have received your order

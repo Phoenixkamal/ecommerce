@@ -1,17 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import ots from './OrderTracking.module.css';
-import { DataContext } from '../../contexts/Datacontext';
 import OrderTrackingList from './OrderTrackingList/OrderTrackingList';
 
-const OrderTracking = () => {
-    const { ordersInfo } = useContext(DataContext)
-
-    const contenthead = [
-        "Order Confirm",
-        "Ready To Ship",
-        "Order Shipped",
-        "Order Delivered"
-    ]
+const OrderTracking = ({ordersInfo}) => {
+    console.log(ordersInfo)
 
     return (
         <div className={ots.orderTracking}>
@@ -19,7 +11,7 @@ const OrderTracking = () => {
             {
                 ordersInfo && (
                     <OrderTrackingList
-                        orderStatus={ordersInfo.status}
+                        orderStatus={ordersInfo.status ? ordersInfo.status:[]}
                         orders={ordersInfo}
                     />
                 )

@@ -1,0 +1,21 @@
+.user-category{
+    grid-auto-columns: 3fr 1fr 1fr 1fr !important;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+.usr-category-list{
+    grid-auto-rows: auto !important;    
+}
+.list-item-icon{
+    font-size: 25px;
+}
+.list-item-icon:nth-child(4){
+    justify-self: end;
+}
+.role-name{
+    font-size: 17px;
+    font-family: "jost",'sans-serif';
+    font-weight: 600;
+    justify-self:left;
+}

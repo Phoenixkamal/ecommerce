@@ -6,7 +6,7 @@ import { FaListUl } from "react-icons/fa6";
 import { BsGridFill } from "react-icons/bs";
 import { DataContext } from '../../contexts/Datacontext';
 
-const SearchHeader = ({ title, viewType,search,setSearch }) => {
+const SearchHeader = ({ title, viewType, search, setSearch, viewbtn, addbtn }) => {
     const { listView, setListView } = useContext(DataContext)
 
     function handleClick() {
@@ -22,15 +22,16 @@ const SearchHeader = ({ title, viewType,search,setSearch }) => {
                     <IoSearch />
                 </div>
                 <form className='search-box'>
-                    <input 
-                        type='text' 
+                    <input
+                        type='text'
                         placeholder={title}
                         value={search}
-                        onChange={(e)=>{setSearch(e.target.value)}} 
+                        onChange={(e) => { setSearch(e.target.value) }}
                     />
                 </form>
             </div>
             {
+                viewbtn &&
                 viewType && <div className='view-type'>
                     {
                         listView ? <FaListUl onClick={handleClick} /> : <BsGridFill onClick={handleClick} />

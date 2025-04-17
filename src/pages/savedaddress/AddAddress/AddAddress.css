@@ -33,3 +33,9 @@
     background-color: black;
     color: white;
 }
+
+@media  screen and (max-width:360px) {
+    .addadress-content{
+        padding: 0px 10px 0px 10px;
+    }
+}

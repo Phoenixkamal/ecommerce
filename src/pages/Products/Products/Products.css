@@ -175,3 +175,12 @@ main{
 .footer-items-wrapper{
     display: flex;
 }
+
+@media screen and (max-width:360px) {
+    .product-card{
+        height: 200px !important;
+    }
+    .card-btn{
+        font-size: 10px;
+    }
+}

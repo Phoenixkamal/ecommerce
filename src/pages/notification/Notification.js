@@ -12,7 +12,7 @@ const Notification = () => {
       <main className='notifications-content'>
         <div className='notification-entity'>
           <div className='notification-image'>
-            <img src={image} alt='notification-image'></img>
+            <img src={image} alt='notification'></img>
           </div>
           <div className='notification-description'>
             <div className='notification-head'> 

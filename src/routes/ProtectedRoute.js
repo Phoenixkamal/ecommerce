@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 
-const ProtectedRoute = ({children}) => {
-  const token = localStorage.getItem('token')
+const ProtectedRoute = ({children,roles}) => {
+  const [isAuthenticated,setIsAuthenticated] = useState(true)
+  const userData  = JSON.parse(localStorage.getItem('userdata'))
+
+
+  useEffect(() => {
+    if (roles.includes(userData.role)) {
+      setIsAuthenticated(true);
+    } else {
+      console.log("User not authorized");
+      setIsAuthenticated(false);
+    }
+  }, [userData.role, roles]);
   return (
     <>
-      {token ? children : <Navigate to='/login'/>}
+      {isAuthenticated ? children : <Navigate to='/dashboard/notfound'/>}
     </>
   )
 }

@@ -16,8 +16,17 @@ const Header = () => {
         profileImage = require(`../../assets/UploadedImages/profileimages/${imageName}`);
     } catch (error) {
         console.log(error.message)
+        profileImage = optionalImage;   
+    }
+
+    try {
+        let imageName = userData.profileImage.slice('/assets/UploadedImages/Users/'.length)
+        profileImage = require(`../../assets/UploadedImages/Users/${imageName}`);
+    } catch (error) {
+        console.log(error.message)
         profileImage = optionalImage;
     }
+
 
     return (
         <header className='product-header header'>
@@ -30,7 +39,7 @@ const Header = () => {
                 </div>
             </div>
             <div className='header-icons'>
-                <Link to="/notification">
+                <Link to="/dashboard/notification">
                     <div className='notification'>
                         <FaRegBell />
                     </div>

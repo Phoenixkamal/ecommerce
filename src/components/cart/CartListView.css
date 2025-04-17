@@ -12,3 +12,7 @@
     gap: 5px;
     cursor: pointer;
 }
+
+.product-list-item{
+    padding:10px 0px 10px 0px;
+}

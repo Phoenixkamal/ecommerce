@@ -3,13 +3,13 @@ import styles from './OrderInfoList.module.css'
 import { FaAngleRight } from 'react-icons/fa6';
 import { GrLocation } from "react-icons/gr";
 import { IoCardOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const OrderInfoList = ({ ordersInfo }) => {
-    console.log(ordersInfo)
     return (
         <div>
             <div className={styles.methods}>
-                <div className={styles.methodsWrap}>
+                <Link  to="/dashboard/savedaddress" className={styles.methodsWrap}>
                     <div className={styles.icon}>
                         <GrLocation />
                     </div>
@@ -27,7 +27,7 @@ const OrderInfoList = ({ ordersInfo }) => {
                     <div className={styles.goNextBtn}>
                         <FaAngleRight />
                     </div>
-                </div>
+                </Link>
                 <div className={styles.methodsWrap}>
                     <div className={styles.icon}>
                         <IoCardOutline />

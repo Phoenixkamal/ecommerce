@@ -17,6 +17,7 @@
 
 .product-insight-image {
     grid-area: image;
+    position: relative;
 }
 
 .productCategory {
@@ -73,3 +74,43 @@
 .product-insight-cart{
     font-size: 25px;
 }
+
+.save-address-option-btn-active {
+    background-color: black;
+    color: white;
+}
+
+
+
+.product-insight-variance {
+    display: block;
+    position: relative;
+    width: 75px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .product-insight-variance input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+
+  .insight-save-address-option {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+
+  
+  .product-insight-variance input:checked ~ .insight-save-address-option {
+    background-color: black;
+    color: white;
+  }
+
+  .wishlist-align >*{
+    top: 20px !important;
+    left: 20px !important;
+  }

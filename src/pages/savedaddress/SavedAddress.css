@@ -117,3 +117,15 @@ p{
 .custom-radio{
     justify-self: end;
 }
+
+@media  screen and (max-width:360px) {
+    .saved-address-contents{
+        padding: 0px 10px 0px 10px;
+    }
+    .saved-address-content-1{
+        grid-auto-columns: 2fr 6fr 1fr;
+    }
+    .add-address-btn{
+        grid-auto-columns: 2fr 13fr 1fr;
+    }
+}

@@ -1,14 +1,18 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SecondaryHeader from '../../../components/secondaryheader/SecondaryHeader'
 import FormInput from '../../../components/forminput/FormInput'
 import api from '../../../api/api'
 import { useNavigate, useParams } from 'react-router-dom'
-import { DataContext } from '../../../contexts/Datacontext'
 
 const EditAddress = () => {
     const navigate = useNavigate()
     const [address, setAddress] = useState({})
-    const {recordid} = useParams()
+    const { recordid } = useParams()
+    const addressType = [
+            'home',
+            'office',
+            'shop'
+        ]
 
     const [contactValues, setContactValues] = useState({
         fullname: address.name,
@@ -46,61 +50,51 @@ const EditAddress = () => {
             name: "house",
             label: "House No / Building Name",
             type: "text",
-            errMsg:""
+            errMsg: ""
         },
         {
             id: "road",
             name: "road",
             label: "Road Name / Area / Colony",
             type: "text",
-            errMsg:""
+            errMsg: ""
         },
         {
             id: "pincode",
             name: "pincode",
             label: "Pin Code",
             type: "text",
-            errMsg:""
+            errMsg: ""
         },
         {
             id: "city",
             name: "city",
             label: "City/District",
             type: "text",
-            errMsg:""
+            errMsg: ""
         },
         {
             id: "state",
             name: "state",
             label: "State",
             type: "text",
-            errMsg:""
+            errMsg: ""
         },
         {
             id: "nearby",
             name: "nearby",
             label: "Nearby Famous Place/Shop",
             type: "text",
-            errMsg:""
+            errMsg: ""
         }
-        
-    ]
-    
-    const UserData = JSON.parse(localStorage.getItem('userdata'))
-    const [clicked, setClicked] = useState({ home: "", shop: "", office: "" })
-    
-    function handleClick(e) {
-        setClicked({
-            [e.target.name]: e.target.value
-        })
-        setPlace(e.target.value)
-    }
 
+    ]
+    const UserData = JSON.parse(localStorage.getItem('userdata'))
     async function updateMyAddresses() {
         const data = {
             mode: "update",
             displayid: UserData.displayId,
-            recordid: recordid,
+            recordid: recordid,// eslint-disable-next-line
             displayid: UserData.displayId,
             name: contactValues.fullname,
             phoneno: contactValues.mobile,
@@ -116,19 +110,17 @@ const EditAddress = () => {
         if (recordid) {
             try {
                 const response = await api.post(`/User/UpsetAddress`, data)
-                if (response.data.status === "OK") {
-                    console.log(response)
-                }
-                else {
-                    console.log(response.data.message)
+                console.log(response)
+                if (response.status === 200) {
+                    navigate(-1)
                 }
             }
             catch (err) {
                 console.log(err.message)
+                alert("You are Missing Something")
             }
         }
 
-        navigate(-1)
     }
 
     useEffect(() => {
@@ -138,6 +130,7 @@ const EditAddress = () => {
                 if (response.data.status === "OK") {
                     console.log(response.data.responsedata)
                     setAddress(response.data.responsedata)
+                    setPlace(response.data.responsedata.type)
                 }
                 else {
                     console.log(response.data.message)
@@ -148,7 +141,7 @@ const EditAddress = () => {
             }
         }
         getAddress()
-    }, [])
+    }, [recordid])
 
 
     useEffect(() => {
@@ -166,6 +159,10 @@ const EditAddress = () => {
         })
     }, [address])
 
+    function handleRadioChange(e) {
+        setPlace(e.target.value)
+    }
+
     return (
         <section className='edit-profile addaddress'>
             <SecondaryHeader
@@ -179,7 +176,7 @@ const EditAddress = () => {
                             <FormInput
                                 {...attr}
                                 key={index}
-                                value={contactValues[attr.name]}
+                                value={contactValues[attr.name] || ""}
                                 values={contactValues}
                                 setValues={setContactValues}
                                 inputName={(attr.name)}
@@ -193,7 +190,7 @@ const EditAddress = () => {
                             <FormInput
                                 {...attr}
                                 key={index}
-                                value={addressValues[attr.name]}
+                                value={addressValues[attr.name] || ""}
                                 values={addressValues}
                                 setValues={setAddressValues}
                                 inputName={(attr.name)}
@@ -203,20 +200,21 @@ const EditAddress = () => {
                     }
                 </form>
                 <h5 className='form-title'>Save Address As</h5>
-                <div className='save-address-options'>
-                    <button className={`category-name save-address-option ${clicked.home ? "save-address-option-btn-active" : ""}`} value={"home"} onClick={handleClick} name='home'>
-                        Home
-                    </button>
-                    <button className={`category-name save-address-option ${clicked.shop ? "save-address-option-btn-active" : ""}`} value={"shop"} name='shop' onClick={handleClick}>
-                        Shop
-                    </button>
-                    <button className={`category-name save-address-option ${clicked.office ? "save-address-option-btn-active" : ""}`} value={"office"} name='office' onClick={handleClick}>
-                        Office
-                    </button>
+                <div className='varianceList'>
+                    {
+                        addressType.map((location, index) => (
+                            <label className='product-list-variance  product-insight-variance mx-2' key={index}>
+                                <input className='variance-radio-input' type="radio" value={location} name={location} checked={place === location} onChange={handleRadioChange} />
+                                <span className={`category-name save-address-option mr-2  insight-save-address-option`}>
+                                    <span className='mr-1 text-capitalize'>{location}</span>
+                                </span>
+                            </label>
+                        ))
+                    }
                 </div>
-                    <button className='update-profile-btn save-address' onClick={updateMyAddresses}>
-                        Save address
-                    </button>
+                <button className='update-profile-btn save-address' onClick={updateMyAddresses}>
+                    Save address
+                </button>
             </main>
         </section>
     )

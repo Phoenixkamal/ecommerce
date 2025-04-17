@@ -11,11 +11,12 @@ import { DataContext } from '../../../contexts/Datacontext';
 import api from '../../../api/api';
 
 const LoginPage = () => {
-    const { loginValidation} = useContext(DataContext)
+    const { loginValidation,setUserData,setRole} = useContext(DataContext)
     const pageHeading = "Sign in to your account"
     const pageDescription = "Welcome Back You've Been Missed!"
     const navigate = useNavigate()
-    const pageImage = "https://www.powertrafic.fr/wp-content/uploads/2023/04/image-ia-exemple.png"
+    // const pageImage = "https://www.powertrafic.fr/wp-content/uploads/2023/04/image-ia-exemple.png"
+    const pageImage ='https://www.salesfire.co.uk/wp-content/uploads/2023/01/What-Is-D2C-eCommerce-and-Why-is-it-Key-to-Customer-Engagement-Image-1024x692.jpeg'
     const inputAttr = [
         {
             name: "username",
@@ -43,6 +44,8 @@ const LoginPage = () => {
             const response = await api.post('/Authentication/Login', { username: email, password: password })
             if (response.data.status === "OK") {
                 console.log(response.data.responsedata)
+                setUserData(response.data.responsedata)
+                setRole(response.data.responsedata.role)
                 localStorage.setItem('userdata',JSON.stringify(response.data.responsedata))
                 localStorage.setItem("token",response.data.responsedata.accessToken)
                 navigate('/dashboard')

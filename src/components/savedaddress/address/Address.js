@@ -13,12 +13,14 @@ const Address = ({item,setAddressRecordId}) => {
             }
         }
         toCheck()
-    },[])
+    },[item])
     async function handleClick(e) {
-        setIsChecked(true)
         try {
           const response = await api.put(`/user/changeaddress?displayid=${UserData.displayId}&recordid=${e.target.value}`)
           console.log(response)
+          if(response.status ===200){
+            setIsChecked(true)
+          }
         }
         catch (err) {
           console.log(err.message)

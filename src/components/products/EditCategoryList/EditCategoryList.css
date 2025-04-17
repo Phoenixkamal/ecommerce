@@ -1,0 +1,54 @@
+.edit-category-list{
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+.edit-category-image img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.edit-category{
+    margin:70px 0px 70px 0px;
+}
+
+.edit-category-list-item-name{
+    align-self: center;
+    font-family: "Jost", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.edit-category-btn{
+    align-self: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.inventory-btn .edit-category-btn{
+    color: white;
+    font-size: 15px;
+}
+.inventory-btn{
+    text-align: center;
+}
+.navigate-btns{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-category-list-item{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.edit-category-list-item-name .text-muted{
+    font-size: 15px !important;
+}

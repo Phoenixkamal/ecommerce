@@ -240,3 +240,27 @@
 .icon{
     position: relative;
 }
+
+.drpdwn-wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.adduserbtn{
+    align-self: center;
+    justify-self: center;
+}
+
+
+@media  (max-width:360px) {
+    .user-list-name{
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+    }
+}
+
+.whistlist {
+    top: 6px !important;
+    left: 6px !important;
+}

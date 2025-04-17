@@ -6,7 +6,7 @@ const ProductSkeleton = () => {
     <div className='card-wrapper col-6'>
             <div className='product-card skeleton'>
                     <div className='card-img'>
-                        <img src="" alt="product-image" />
+                        <img src="" alt="product" />
                         <div className='whistlist'>
                         </div>
                     </div>

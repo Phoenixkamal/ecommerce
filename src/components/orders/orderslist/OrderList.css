@@ -1,7 +1,6 @@
-.order-list{
-    margin-top: 70px;
+.order-list {
+    margin: 70px 0px 70px 0px;
 }
-
 .order-list .head{
     font-weight: 500;
     font-size: 20px;

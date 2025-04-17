@@ -3,7 +3,7 @@ import Product from '../product/Product';
 import ProductListView from '../productListView/ProductListView';
 import { DataContext } from '../../../contexts/Datacontext';
 
-const ProductsList = ({ products}) => {
+const ProductsList = ({withTrash, products,setCounterRefresh,counterRefresh}) => {
     const {listView} = useContext(DataContext)
     return (
         <div className='products-list row'>
@@ -12,7 +12,11 @@ const ProductsList = ({ products}) => {
                 products.map((product, index) => (
                     <ProductListView
                         key={index}
+                        btnAddon={index}
                         product={product}
+                        withTrash={withTrash}
+                        setCounterRefresh={setCounterRefresh}
+                        counterRefresh={counterRefresh}
                     />
                 )) : products.map((product, index) => (
                     <Product

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./AuthBanner.module.css"
+import authStyles from "./AuthBanner.module.css"
 import ReturnBack from '../../../components/returnback/ReturnBack'
 import { MdKeyboardArrowLeft } from 'react-icons/md'
 
@@ -8,9 +8,11 @@ const AuthBanner = ({imageUrl,alt}) => {
     return (
         <div className='auth-container-img'>
             <img src={imageUrl} alt={alt} />
-            <ReturnBack>
+            <div className={authStyles.returnBack}>
+            <ReturnBack >
                 <MdKeyboardArrowLeft />
             </ReturnBack>
+            </div>
         </div>
     )
 }

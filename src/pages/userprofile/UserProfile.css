@@ -2,8 +2,11 @@
     background:  linear-gradient(180deg, #FEECA0 0%, #FFFAF3 29.87%);
     position: fixed;
     top: 0px;
-    z-index: 9999;
+    z-index: 111    ;
     width: 600px;
+    overflow: scroll;
+    height: 100vh;
+    scrollbar-width: none;
 }
 @media (max-width:600px){
     .userprofile{

@@ -11,8 +11,7 @@ const Cart = () => {
   const userData = JSON.parse(localStorage.getItem('userdata'))
   const [cartItems, setCartItem] = useState([])
   const [subtotal, setSubTotal] = useState(0)
-  const [filterId, setFilterId] = useState(0) 
-  const [counterRefresh, setCounterRefresh] = useState(false)
+  const [counterRefresh, setCounterRefresh] = useState(true)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -28,6 +27,9 @@ const Cart = () => {
           }
           else {
             console.log(response.data.message)
+            if(response.data.message==="No data found."){
+              setCartLength(0)
+            }
           }
         }
         catch (err) {
@@ -35,13 +37,9 @@ const Cart = () => {
         }
       }
     }
+    setCartItem([])
     getCartItems()
-  }, [counterRefresh])
-
-  useEffect(() => {
-    setCartItem(cartItems.filter((item) => item.recordId !== filterId)) 
-  }, [filterId])
-
+  }, [counterRefresh,userData.cartDisplayId,setCartLength,setCheckOutItem])
   function handleClick(){
     navigate('/dashboard/checkout')
   }
@@ -65,7 +63,6 @@ const Cart = () => {
                   <CartListView
                     key={index}
                     product={product}
-                    setFilterId={setFilterId}
                     setCounterRefresh={setCounterRefresh}
                     counterRefresh={counterRefresh}
                   />

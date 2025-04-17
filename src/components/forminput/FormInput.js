@@ -10,7 +10,7 @@ const FormInput = (props) => {
     
     return (
         <>
-            <div className="my-form-group">
+            <div className="my-form-group mt-2">
                 <label htmlFor={inputprops.id}>{label}</label>
                 <input className={`my-form-input`}
                     {...inputprops}

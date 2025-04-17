@@ -12,18 +12,27 @@ const EditProfile = () => {
   const { validate } = useContext(DataContext)
   const UserData = JSON.parse(localStorage.getItem('userdata'))
   const navigate = useNavigate()
+  
 
   const userData = JSON.parse(localStorage.getItem('userdata'))
 
     let profileImage;
     
     try {
-        const imageName = userData.profileImage.slice('/assets/custom-assets/Image/'.length)
+        let imageName = userData.profileImage.slice('/assets/custom-assets/Image/'.length)
         profileImage = require(`../../assets/UploadedImages/profileimages/${imageName}`);
     } catch (error) {
         console.log(error.message)
         profileImage = optionalImage;
     }
+
+    try {
+      let imageName = userData.profileImage.slice('/assets/UploadedImages/Users/'.length)
+      profileImage = require(`../../assets/UploadedImages/Users/${imageName}`);
+  } catch (error) {
+      console.log(error.message)
+      profileImage = optionalImage;
+  }
 
   const [values, setValues] = useState({
     username: UserData.userName,
@@ -71,17 +80,27 @@ const EditProfile = () => {
     e.preventDefault()
     console.log(validate(inputAttr, values, setErrors))
     if (validate(inputAttr, values, setErrors)) {
-      console.log(values)
-      const updateData = {
+      const formData = new FormData();
+      const setAddrs = {
         userdisplayid: UserData.displayId,
         name: values.username,
         email: values.email,
         phoneno: values.mobile,
-        password: values.password
+        password: values.password,
+        profileImage:userData.profileImage
       }
+      for (const key in setAddrs) {
+        formData.append(key, setAddrs[key]);
+    }
 
+      if(selectedFile){
+        formData.append('file', selectedFile);
+      }
+      else{
+        formData.append('file',"")
+      }
       try{
-        await api.post('/user/updateprofile',updateData)
+         await api.post('/user/updateprofile',formData)
       }
       catch(err){
         console.log(err.message)
@@ -104,7 +123,7 @@ const EditProfile = () => {
       <SecondaryHeader
         title={'Edit Profile'}
       />
-      <main className='edit-profile-content'>
+      <main className='edit-profile-content my-5'>
         <div className='profile-picture'>
           <div className='profile-change-outline'>
             <div className='profile-change'>
@@ -132,7 +151,7 @@ const EditProfile = () => {
               />
             ))
           }
-          <button className='update-profile-btn' type='submit'>
+          <button className='update-profile-btn mb-5' type='submit'>
             Update Profile
           </button>
         </form>

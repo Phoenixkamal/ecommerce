@@ -17,3 +17,9 @@
 .black-btn-wrap:hover{
     text-decoration: none;
 }
+
+@media  screen and (max-width:360px) {
+    .black-btn{
+        width:100px
+    }
+}

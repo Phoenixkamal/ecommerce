@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import SecondaryHeader from '../../../components/secondaryheader/SecondaryHeader'
 import FormInput from '../../../components/forminput/FormInput'
 import './AddAddress.css'
@@ -7,6 +7,9 @@ import { useNavigate } from 'react-router-dom'
 
 const AddAddress = () => {
     const navigate = useNavigate()
+    const UserData = JSON.parse(localStorage.getItem('userdata'))
+    const [place, setPlace] = useState("")
+    const errors = {}
 
     const [contactValues, setContactValues] = useState({
         fullname: "",
@@ -20,9 +23,6 @@ const AddAddress = () => {
         state: "",
         nearby: ""
     })
-    const [place, setPlace] = useState("")
-
-    const errors = {}
 
     const [clicked, setClicked] = useState({ home: "", shop: "", office: "" })
     const contactFormAttr = [
@@ -87,8 +87,6 @@ const AddAddress = () => {
         setPlace(e.target.value)
     }
 
-    const UserData = JSON.parse(localStorage.getItem('userdata'))
-
 
     async function GetMyAddresses() {
         const data = {
@@ -125,7 +123,7 @@ const AddAddress = () => {
     return (
         <section className='edit-profile addaddress'>
             <SecondaryHeader
-                title={'Edit Profile'}
+                title={'Add Address'}
             />
             <main className='addadress-content'>
                 <form className='my-form mb-3'>

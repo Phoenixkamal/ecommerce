@@ -34,3 +34,9 @@
     font-size: 14px;
     opacity: 0.7;
 }
+
+@media screen and (max-width:360px) {
+    .notification-entity{
+        grid-auto-columns: 2fr 7fr
+    }
+}

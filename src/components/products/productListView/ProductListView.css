@@ -59,3 +59,15 @@
 .counter{
     font-size: 30px;
 }
+
+.varianceList{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-list-image.with-trash{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}

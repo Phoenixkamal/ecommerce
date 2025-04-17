@@ -31,7 +31,7 @@ const SavedAddress = () => {
       }
     }
     GetMyAddresses()
-  }, [])
+  }, [displayId])
 
   return (
     <div className='saved-address'>

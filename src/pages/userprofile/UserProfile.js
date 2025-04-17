@@ -3,10 +3,11 @@ import './UserProfile.css'
 import brand_image from '../../assets/custom-assets/Image/logo.png'
 import { FaAngleRight, FaRegBell } from 'react-icons/fa6'
 import optionalImage from '../../assets/images/product-card-img-1.png'
-import OrderInfoBtns from '../../components/ordersinfo/OrderInfoBtns/OrderInfoBtns'
 import { GoBell, GoLocation, GoPerson } from "react-icons/go";
 import { Link } from 'react-router-dom'
-
+import { BsGrid } from 'react-icons/bs'
+import { LiaUserEditSolid, LiaWarehouseSolid } from 'react-icons/lia'
+import { IoMdHeartEmpty } from 'react-icons/io'
 const UserProfile = () => {
 
     const userData = JSON.parse(localStorage.getItem('userdata'))
@@ -21,20 +22,25 @@ const UserProfile = () => {
         profileImage = optionalImage;
     }
 
-    const btnStyle = {
-        border: '1px solid white',
-        backgroundColor: 'white',
-        boxShadow: '0px 5px 10px 0px rgba(187, 107, 0, 0.1)',
-        color: 'black'
+    try {
+        let imageName = userData.profileImage.slice('/assets/UploadedImages/Users/'.length)
+        profileImage = require(`../../assets/UploadedImages/Users/${imageName}`);
+    } catch (error) {
+        console.log(error.message)
+        profileImage = optionalImage;
     }
     const UserData = JSON.parse(localStorage.getItem('userdata'))
+
+
+
+
     return (
         <section className='userprofile'>
             <header className='userprofile-header'>
                 <div className='userprofile-header-brand'>
                     <img src={brand_image} alt='brand-name' />
                 </div>
-                <Link to='/notification'>
+                <Link to='/dashboard/notification'>
                     <div className='notification'>
                         <FaRegBell />
                     </div>
@@ -49,12 +55,12 @@ const UserProfile = () => {
                         Hello <b>{UserData.userName}</b>
                     </div>
                 </div>
-                <div className='userprofile-btns'>
+                {/* <div className='userprofile-btns'>
                     <OrderInfoBtns
                         btnStyle={btnStyle}
                     />
-                </div>
-                <div className='account-settings'>
+                </div> */}
+                <div className='account-settings mt-5'>
                     <div className='account-setting-header'>
                         <h5>Account Settings</h5>
                     </div>
@@ -63,7 +69,7 @@ const UserProfile = () => {
                             <div className='list-item-icon'>
                                 <GoPerson />
                             </div>
-                            <Link to="/editprofile" className='option-name'>
+                            <Link to="/dashboard/editprofile" className='option-name'>
                                 Edit Profile
                             </Link>
                             <div className='goNext'>
@@ -74,7 +80,7 @@ const UserProfile = () => {
                             <div className='list-item-icon'>
                                 <GoLocation />
                             </div>
-                            <Link to="/savedaddress" className='option-name'>
+                            <Link to="/dashboard/savedaddress" className='option-name'>
                                 Saved Addresses
                             </Link>
                             <div className='goNext'>
@@ -85,14 +91,69 @@ const UserProfile = () => {
                             <div className='list-item-icon'>
                                 <GoBell />
                             </div>
-                            <Link to="/notification" className='option-name'>
+                            <Link to="/dashboard/notification" className='option-name'>
                                 Notifications
                             </Link>
                             <div className='goNext'>
                                 <FaAngleRight />
                             </div>
                         </li>
+                        <li className='account-setting-list-items'>
+                            <div className='list-item-icon'>
+                            <IoMdHeartEmpty />
+                            </div>
+                            <Link to="/dashboard/wishlist" className='option-name'>
+                                Wishlist
+                            </Link>
+                            <div className='goNext'>
+                                <FaAngleRight />
+                            </div>
+                        </li>
+
                     </ul>
+                    {
+                        userData.role === "Admin" &&
+                        <div>
+                            <div className='account-setting-header'>
+                                <h5>Admin Settings</h5>
+                            </div>
+                            <ul className='account-setting-list'>
+                                <li className='account-setting-list-items'>
+                                    <div className='list-item-icon'>
+                                        <BsGrid />
+                                    </div>
+                                    <Link to="/dashboard/editcategorylist" className='option-name mt-2'>
+                                        Inventory Management
+                                    </Link>
+                                    <div className='goNext'>
+                                        <FaAngleRight />
+                                    </div>
+                                </li>
+                                <li className='account-setting-list-items'>
+                                    <div className='list-item-icon'>
+                                        <LiaUserEditSolid />
+                                    </div>
+                                    <Link to="/dashboard/edituserslist" className='option-name mt-2'>
+                                        User Management
+                                    </Link>
+                                    <div className='goNext'>
+                                        <FaAngleRight />
+                                    </div>
+                                </li>
+                                <li className='account-setting-list-items'>
+                                    <div className='list-item-icon'>
+                                    <LiaWarehouseSolid />
+                                    </div>
+                                    <Link to="/dashboard/warehouselist" className='option-name mt-2'>
+                                        Wareshouse Management
+                                    </Link>
+                                    <div className='goNext'>
+                                        <FaAngleRight />
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    }
                 </div>
             </main>
         </section>

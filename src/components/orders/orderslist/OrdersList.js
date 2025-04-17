@@ -5,7 +5,7 @@ import './OrderList.css'
 const OrdersList = ({orders}) => {
   return (
     <div className='order-list'>
-        <div className='head'>My Orders</div>
+        {/* <div className='head'>My Orders</div> */}
         {
             orders.map((order,index)=>(
                 <Order

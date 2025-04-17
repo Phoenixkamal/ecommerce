@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { IoCartOutline, IoPersonOutline } from 'react-icons/io5'
 import { LuHome } from 'react-icons/lu'
 import { HiOutlineShoppingBag } from "react-icons/hi2";
@@ -7,14 +7,14 @@ import { Link } from 'react-router-dom';
 import { DataContext } from '../../contexts/Datacontext';
 
 const Footer = () => {
-    const { cartCount, cartLength } = useContext(DataContext)
+    const { cartCount } = useContext(DataContext)
 
     return (
         <footer className='product-footer'>
             <Link className='icon' to="/dashboard">
                 <LuHome />
             </Link>
-            <Link className='icon' to="/dashboard/products">
+            <Link className='icon' to="/dashboard/category">
                 <IoNewspaperOutline />
             </Link>
             <Link className='icon' to="/dashboard/cart">

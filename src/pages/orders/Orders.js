@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import OrdersList from '../../components/orders/orderslist/OrdersList'
-import SearchHeader from '../../components/searchHeader/SearchHeader'
 import api from '../../api/api'
+import SecondaryHeader from '../../components/secondaryheader/SecondaryHeader'
 
 const Orders = () => {
     const userData = JSON.parse(localStorage.getItem('userdata'))
@@ -26,12 +26,15 @@ const Orders = () => {
         }
 
         getAllOrders()
-    }, [])
+    }, [userData.displayId])
     return (
         <div className='orders'>
-            <SearchHeader
+            {/* <SearchHeader
                 title={"Search Orders"}
-            />
+            /> */}
+                <SecondaryHeader
+        title={"Orders"}
+      />
             <OrdersList
                 orders={orders}
             />
